@@ -1,0 +1,63 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon Q
+  description: Vocabulary for Amazon Q APIs covering operational and capability dimensions
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - name: Amazon Q
+    namespace: amazon-q
+    status: active
+  resources:
+  - name: applications
+    api: amazon-q-openapi
+    actions:
+    - ListApplications
+    - CreateApplication
+  actions:
+  - name: list
+    httpMethod: GET
+    pattern: read
+  - name: create
+    httpMethod: POST
+    pattern: write
+  - name: get
+    httpMethod: GET
+    pattern: read
+  - name: delete
+    httpMethod: DELETE
+    pattern: write
+  - name: post
+    httpMethod: POST
+    pattern: write
+  schemas:
+    core:
+    - amazon-q-openapi-application
+    - amazon-q-openapi-conversation
+    - amazon-q-openapi-data-source
+    - amazon-q-openapi-index
+    - amazon-q-openapi-message
+  authentication:
+    schemes:
+    - type: bearer
+      description: AWS Signature V4
+capability:
+  workflows:
+  - name: Amazon Q Operations
+    file: capabilities/amazon-q.yaml
+    description: Automation workflow for Amazon Q
+  personas:
+  - id: cloud-engineer
+    name: Cloud Engineer
+    description: Engineer managing Amazon Q resources
+  domains:
+  - name: Cloud Operations
+    description: AWS cloud resource management
+crossReference:
+- resource: applications
+  operations:
+  - ListApplications
+  - CreateApplication
+  workflows:
+  - Amazon Q Operations

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-q/refs/heads/main/json-structure/amazon-q-openapi-data-source-structure.json",
+  "description": "DataSource schema from openapi",
+  "type": "object",
+  "properties": {
+    "dataSourceId": {
+      "type": "string",
+      "description": "The unique identifier of the data source."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "The name of the data source."
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of data source connector."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING_CREATION",
+        "CREATING",
+        "ACTIVE",
+        "DELETING",
+        "UPDATING",
+        "NEEDS_ATTENTION",
+        "FAILED"
+      ],
+      "description": "The status of the data source."
+    }
+  },
+  "name": "DataSource"
+}

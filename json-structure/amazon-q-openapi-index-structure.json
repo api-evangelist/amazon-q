@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-q/refs/heads/main/json-structure/amazon-q-openapi-index-structure.json",
+  "description": "Index schema from openapi",
+  "type": "object",
+  "properties": {
+    "indexId": {
+      "type": "string",
+      "description": "The unique identifier of the index."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "The name of the index."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CREATING",
+        "ACTIVE",
+        "DELETING",
+        "FAILED",
+        "UPDATING"
+      ],
+      "description": "The status of the index."
+    }
+  },
+  "name": "Index"
+}

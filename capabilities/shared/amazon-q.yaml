@@ -1,0 +1,107 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Q Business API
+  description: Amazon Q Business is a generative AI-powered enterprise assistant that enables employees to ask questions, get summaries, generate content, and take actions using enterprise data.
+  tags:
+  - Amazon Q
+  - AWS
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_Q_API_KEY: AMAZON_Q_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-q
+    baseUri: https://qbusiness.{region}.amazonaws.com
+    description: Amazon Q Business API
+    authentication:
+      type: bearer
+      token: '{{AWS_ACCESS_KEY}}'
+    resources:
+    - name: applications
+      path: /applications
+      description: applications operations
+      operations:
+      - name: ListApplications
+        method: GET
+        description: List Applications
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: CreateApplication
+        method: POST
+        description: Create Application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: GetApplication
+        method: GET
+        description: Get Application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: DeleteApplication
+        method: DELETE
+        description: Delete Application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: ListConversations
+        method: GET
+        description: List Conversations
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: ChatSync
+        method: POST
+        description: Chat Sync
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: ListDataSources
+        method: GET
+        description: List Data Sources
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: CreateDataSource
+        method: POST
+        description: Create Data Source
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: ListIndices
+        method: GET
+        description: List Indices
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: CreateIndex
+        method: POST
+        description: Create Index
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.

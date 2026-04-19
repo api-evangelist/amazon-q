@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "aws": "https://aws.amazon.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Conversation": "aws:Conversation",
+    "conversationId": {
+      "@id": "aws:conversationId",
+      "@type": "xsd:string"
+    },
+    "title": {
+      "@id": "aws:title",
+      "@type": "xsd:string"
+    },
+    "createdAt": {
+      "@id": "aws:createdAt",
+      "@type": "xsd:dateTime"
+    }
+  }
+}

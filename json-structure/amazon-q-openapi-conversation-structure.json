@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-q/refs/heads/main/json-structure/amazon-q-openapi-conversation-structure.json",
+  "description": "Conversation schema from openapi",
+  "type": "object",
+  "properties": {
+    "conversationId": {
+      "type": "string",
+      "description": "The unique identifier of the conversation."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the conversation."
+    },
+    "createdAt": {
+      "type": "datetime",
+      "description": "The date and time the conversation was created."
+    }
+  },
+  "name": "Conversation"
+}

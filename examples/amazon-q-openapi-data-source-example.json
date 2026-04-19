@@ -1,0 +1,6 @@
+{
+  "dataSourceId": "abc123",
+  "displayName": "Example Resource",
+  "type": "example-value",
+  "status": "PENDING_CREATION"
+}

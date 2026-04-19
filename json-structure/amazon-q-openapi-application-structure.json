@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-q/refs/heads/main/json-structure/amazon-q-openapi-application-structure.json",
+  "description": "Application schema from openapi",
+  "type": "object",
+  "properties": {
+    "applicationId": {
+      "type": "string",
+      "description": "The unique identifier of the Amazon Q application."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "The name of the Amazon Q application."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CREATING",
+        "ACTIVE",
+        "DELETING",
+        "FAILED",
+        "UPDATING"
+      ],
+      "description": "The status of the Amazon Q application."
+    },
+    "createdAt": {
+      "type": "datetime",
+      "description": "The date and time the application was created."
+    },
+    "updatedAt": {
+      "type": "datetime",
+      "description": "The date and time the application was last updated."
+    }
+  },
+  "name": "Application"
+}

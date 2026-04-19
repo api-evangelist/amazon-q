@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-q/refs/heads/main/json-schema/amazon-q-openapi-message-schema.json",
+  "title": "Message",
+  "description": "Message schema from openapi",
+  "type": "object",
+  "properties": {
+    "messageId": {
+      "type": "string",
+      "description": "The unique identifier of the message."
+    },
+    "body": {
+      "type": "string",
+      "description": "The content of the message."
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "USER",
+        "SYSTEM"
+      ],
+      "description": "The type of message."
+    },
+    "time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The time the message was sent."
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "aws": "https://aws.amazon.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Message": "aws:Message",
+    "messageId": {
+      "@id": "aws:messageId",
+      "@type": "xsd:string"
+    },
+    "body": {
+      "@id": "aws:body",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "aws:type",
+      "@type": "xsd:string"
+    },
+    "time": {
+      "@id": "aws:time",
+      "@type": "xsd:dateTime"
+    }
+  }
+}
