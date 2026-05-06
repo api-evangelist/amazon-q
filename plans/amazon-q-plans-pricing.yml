@@ -4,179 +4,238 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Amazon Q
 providerId: amazon-q
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: true
 tags:
-  - Artificial Intelligence
-  - Assistant
+  - Amazon
   - AWS
-  - Enterprise
-  - Generative AI
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
+  - GenAI
+  - AI Assistant
+  - Developer Tools
+description: Amazon Q is sold as two product lines. Q Developer is per-user/month with a Free tier (50
+  agentic requests) and a Pro tier ($19/user/month). Q Business is per-user/month with Lite ($3) and
+  Pro ($20) plans, plus separate Index pricing (per-hour Starter or Enterprise units), media-processing
+  surcharges, and consumption-based pricing for anonymous/embedded use cases.
+sources:
+  - https://aws.amazon.com/q/developer/pricing/
+  - https://aws.amazon.com/q/business/pricing/
 plans:
-  - id: amazon-q-free
-    name: Free
+  - id: amazon-q-developer-free
+    name: Q Developer - Free
     type: freemium
-    description: Free entry tier for the Amazon Q API surface. Intended for evaluation, prototyping, and
-      low-volume integrations. Real limits and pricing must be reconciled with the provider's published
-      plan documentation.
+    description: Free tier for individual developers - 50 agentic requests per month, access to latest
+      Claude models in IDE and CLI.
     entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
+      - label: Per user
+        name: developer_free_seat
+        type: subscription
+        metric: seat
+        limit: -1
         timeFrame: month
         geo: global
-        domains:
-          - https://qbusiness.{region}.amazonaws.com
-          - https://q.{region}.amazonaws.com
-          - https://wisdom.{region}.amazonaws.com
-          - https://chatbot.{region}.amazonaws.com
         unit: 1
         price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
+        userMultiplied: true
+      - label: Agentic requests
+        name: developer_free_agentic
+        type: quota
+        metric: request
+        limit: 50
+        timeFrame: month
         geo: global
-        domains:
-          - https://qbusiness.{region}.amazonaws.com
-          - https://q.{region}.amazonaws.com
-          - https://wisdom.{region}.amazonaws.com
-          - https://chatbot.{region}.amazonaws.com
         unit: 1
         price: '0.00'
         userMultiplied: false
     elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: Amazon Q Business API
-      - name: Amazon Q Business QApps API
-      - name: Amazon Q Developer API
-      - name: Amazon Q Connect API
-      - name: Amazon Q Developer in Chat Applications API
-  - id: amazon-q-pro
-    name: Professional
-    type: paid
-    description: Production tier for Amazon Q. Provides higher quotas, priority support, and access to
-      the broader API portfolio. Pricing placeholder; align with the provider's pricing page.
+      - name: Latest Claude models
+      - name: IDE and CLI integration
+      - name: Reference tracking
+      - name: Public code suppression
+      - name: Q&A in AWS Console
+  - id: amazon-q-developer-pro
+    name: Q Developer - Pro
+    type: subscription
+    description: Per-user paid plan with elevated agentic-request limits, code transformation, and admin
+      controls.
     entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
+      - label: Per user
+        name: developer_pro_seat
+        type: subscription
+        metric: seat
+        limit: -1
         timeFrame: month
         geo: global
-        domains:
-          - https://qbusiness.{region}.amazonaws.com
-          - https://q.{region}.amazonaws.com
-          - https://wisdom.{region}.amazonaws.com
-          - https://chatbot.{region}.amazonaws.com
         unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://qbusiness.{region}.amazonaws.com
-          - https://q.{region}.amazonaws.com
-          - https://wisdom.{region}.amazonaws.com
-          - https://chatbot.{region}.amazonaws.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
+        price: '19.00'
+        userMultiplied: true
+      - label: Code-transformation overage
+        name: developer_pro_overage
         type: metered
-        metric: requests
+        metric: line-of-code
         limit: -1
         timeFrame: month
         geo: global
-        domains:
-          - https://qbusiness.{region}.amazonaws.com
-          - https://q.{region}.amazonaws.com
-          - https://wisdom.{region}.amazonaws.com
-          - https://chatbot.{region}.amazonaws.com
-        unit: 1000
-        price: TBD
+        unit: 1
+        price: '0.003'
         userMultiplied: false
     elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: Amazon Q Business API
-      - name: Amazon Q Business QApps API
-      - name: Amazon Q Developer API
-      - name: Amazon Q Connect API
-      - name: Amazon Q Developer in Chat Applications API
-  - id: amazon-q-enterprise
-    name: Enterprise
-    type: enterprise
-    description: Custom-negotiated tier for Amazon Q. Includes dedicated capacity, contractual SLAs, security
-      review, data residency options, and named technical account management.
+      - name: Increased agentic request limits
+      - name: 4,000 LOC/month Java + .NET transformation (pooled per account)
+      - name: Admin dashboard, user and policy management
+      - name: Identity Center support
+      - name: IP indemnity
+  - id: amazon-q-business-lite
+    name: Q Business - Lite
+    type: subscription
+    description: Per-user plan for question answering and basic permission-aware responses, up to ~1-page
+      answers.
     entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
+      - label: Per user
+        name: business_lite_seat
+        type: subscription
+        metric: seat
         limit: -1
         timeFrame: month
-        geo: configurable
-        domains:
-          - https://qbusiness.{region}.amazonaws.com
-          - https://q.{region}.amazonaws.com
-          - https://wisdom.{region}.amazonaws.com
-          - https://chatbot.{region}.amazonaws.com
+        geo: global
         unit: 1
-        price: custom
+        price: '3.00'
+        userMultiplied: true
+    elements:
+      - name: Permission-aware responses
+      - name: Secure enterprise login
+      - name: File insights
+      - name: Browser extension
+  - id: amazon-q-business-pro
+    name: Q Business - Pro
+    type: subscription
+    description: Per-user plan with full capabilities including Q Apps, QuickSight integration, Slack/Outlook/Teams
+      integration.
+    entries:
+      - label: Per user
+        name: business_pro_seat
+        type: subscription
+        metric: seat
+        limit: -1
+        timeFrame: month
+        geo: global
+        unit: 1
+        price: '20.00'
+        userMultiplied: true
+    elements:
+      - name: Q Apps
+      - name: QuickSight integration
+      - name: Up to ~7-page responses
+      - name: Image processing
+      - name: API integrations
+      - name: Slack, Outlook, Word, Teams integration
+  - id: amazon-q-business-index
+    name: Q Business - Index
+    type: usage-based
+    description: Hourly capacity for indexing connected data sources. Required alongside seat plans.
+    entries:
+      - label: Starter Index
+        name: starter_index
+        type: metered
+        metric: index-unit-hour
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.140'
         userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains:
-          - https://qbusiness.{region}.amazonaws.com
-          - https://q.{region}.amazonaws.com
-          - https://wisdom.{region}.amazonaws.com
-          - https://chatbot.{region}.amazonaws.com
+      - label: Enterprise Index
+        name: enterprise_index
+        type: metered
+        metric: index-unit-hour
+        limit: -1
+        timeFrame: usage
+        geo: global
         unit: 1
-        price: custom
+        price: '0.264'
+        userMultiplied: false
+      - label: Image processing
+        name: media_image
+        type: metered
+        metric: image
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.003'
+        userMultiplied: false
+      - label: Audio processing
+        name: media_audio
+        type: metered
+        metric: minute
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.006'
+        userMultiplied: false
+      - label: Video processing
+        name: media_video
+        type: metered
+        metric: minute
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.050'
         userMultiplied: false
     elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: Amazon Q Business API
-      - name: Amazon Q Business QApps API
-      - name: Amazon Q Developer API
-      - name: Amazon Q Connect API
-      - name: Amazon Q Developer in Chat Applications API
+      - name: Connected data source indexing
+      - name: Multimodal media ingestion
+  - id: amazon-q-business-consumption
+    name: Q Business - Consumption (anonymous/embedded)
+    type: usage-based
+    description: Per-unit pricing for anonymous or embedded use cases - 2 units per API call or prompt.
+    entries:
+      - label: Consumption units
+        name: consumption_units
+        type: metered
+        metric: unit
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 30000
+        price: '200.00'
+        userMultiplied: false
+    elements:
+      - name: No per-seat fee
+      - name: Suited for embedded apps and anonymous endpoints
+  - id: amazon-q-business-trial
+    name: Q Business - 60-Day Trial
+    type: freemium
+    description: Free 60-day trial for up to 50 Pro or Lite users plus 1,500 complimentary index hours.
+    entries:
+      - label: Trial users
+        name: trial_users
+        type: quota
+        metric: seat
+        limit: 50
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Trial index hours
+        name: trial_index_hours
+        type: quota
+        metric: index-hour
+        limit: 1500
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: One trial application per AWS Payer account
+      - name: 60-day evaluation window
 maintainers:
-  - FN: Kin Lane
+  - name: Kin Lane
     email: kin@apievangelist.com
-    x-twitter: apievangelist
+    url: https://apievangelist.com
+  - name: Amazon Web Services
+    email: support@aws.amazon.com
+    url: https://aws.amazon.com

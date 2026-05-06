@@ -4,107 +4,68 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Amazon Q
 providerId: amazon-q
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: true
 tags:
-  - Artificial Intelligence
-  - Assistant
-  - AWS
-  - Enterprise
-  - Generative AI
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Amazon Q API surface. Captures per-tier quotas,
-  burst behavior, response signaling, and recovery semantics. Defaults are scaffold values to be replaced
-  with published provider limits.
+  - AWS
+  - GenAI
+  - Amazon Q
+description: Amazon Q APIs (qbusiness, qdeveloper) follow standard AWS API throttling per account/region.
+  Q Business agentic-request quotas and Q Developer agentic-request limits are tracked per user/subscription
+  and surface as plan-level quotas rather than per-second throttles. AWS recommends exponential backoff
+  with jitter on ThrottlingException.
+sources:
+  - https://docs.aws.amazon.com/amazonq/latest/api-reference/Welcome.html
+  - https://docs.aws.amazon.com/general/latest/gr/api-retries.html
 headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
+  requestId: x-amzn-RequestId
   retryAfter: Retry-After
-  policy: RateLimit-Policy
 responseCodes:
-  throttled: 429
-  quotaExceeded: 429
+  throttled: 400
+  quotaExceeded: 400
   serviceUnavailable: 503
 limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - Amazon Q Business API
-      - Amazon Q Business QApps API
-      - Amazon Q Developer API
-      - Amazon Q Connect API
-      - Amazon Q Developer in Chat Applications API
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
+  - name: Q Business control-plane API
+    scope: account/region
+    metric: varies
+    limit: see Service Quotas console for Amazon Q Business
+    notes: Standard AWS API throttling envelope; raisable via Service Quotas.
+  - name: Q Business chat / ChatSync
+    scope: application
+    metric: requests_per_second
+    limit: see Service Quotas console for Amazon Q Business
+    notes: Per-application concurrency and TPS limits documented in Service Quotas.
+  - name: Q Developer agentic requests (Free tier)
+    scope: user
     metric: requests_per_month
-    limit: 1000
+    limit: 50
     timeFrame: month
-    applies:
-      - Amazon Q Business API
-      - Amazon Q Business QApps API
-      - Amazon Q Developer API
-      - Amazon Q Connect API
-      - Amazon Q Developer in Chat Applications API
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - Amazon Q Business API
-      - Amazon Q Business QApps API
-      - Amazon Q Developer API
-      - Amazon Q Connect API
-      - Amazon Q Developer in Chat Applications API
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
+    notes: Plan-level monthly quota; not a rate limit per second.
+  - name: Q Developer agentic requests (Pro tier)
+    scope: user
     metric: requests_per_month
-    limit: 100000
+    limit: see Q Developer pricing page
+    notes: Elevated quota - exact value increases over time; check console.
+  - name: Code-transformation lines (Pro)
+    scope: account
+    metric: lines_per_month
+    limit: 4000
     timeFrame: month
-    applies:
-      - Amazon Q Business API
-      - Amazon Q Business QApps API
-      - Amazon Q Developer API
-      - Amazon Q Connect API
-      - Amazon Q Developer in Chat Applications API
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - Amazon Q Business API
-      - Amazon Q Business QApps API
-      - Amazon Q Developer API
-      - Amazon Q Connect API
-      - Amazon Q Developer in Chat Applications API
+    notes: Pooled across all Pro users in the account; overage at $0.003/LOC.
 policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+  - name: Backoff with jitter
+    description: AWS SDKs default to standard retry mode (truncated exponential backoff with jitter, max
+      20s, 3 attempts).
+  - name: Plan vs throttle quotas
+    description: Per-user agentic-request limits behave as monthly quotas; exceeding triggers a quota error
+      rather than throttling.
+  - name: Quota increases
+    description: Account-level API throttle limits are raisable via Service Quotas or AWS Support.
 maintainers:
-  - FN: Kin Lane
+  - name: Kin Lane
     email: kin@apievangelist.com
-    x-twitter: apievangelist
+    url: https://apievangelist.com
+  - name: Amazon Web Services
+    email: support@aws.amazon.com
+    url: https://aws.amazon.com
