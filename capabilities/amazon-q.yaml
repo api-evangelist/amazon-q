@@ -1,4 +1,4 @@
-naftiko: 1.0.0-alpha1
+naftiko: 1.0.0-alpha2
 info:
   label: Amazon Q Operations
   description: Workflow capability for Amazon Q. Enables automation of Amazon Q resources for cloud operations teams.
@@ -7,7 +7,7 @@ info:
   - AWS
   - Cloud Operations
   created: '2026-04-19'
-  modified: '2026-04-19'
+  modified: '2026-05-06'
 binds:
 - namespace: env
   keys:
@@ -15,8 +15,98 @@ binds:
     AWS_SECRET_KEY: AWS_SECRET_KEY
 capability:
   consumes:
-  - import: amazon-q
-    location: ./shared/amazon-q.yaml
+  - type: http
+    namespace: amazon-q
+    baseUri: https://qbusiness.{region}.amazonaws.com
+    description: Amazon Q Business API
+    authentication:
+      type: bearer
+      token: '{{AWS_ACCESS_KEY}}'
+    resources:
+    - name: applications
+      path: /applications
+      description: applications operations
+      operations:
+      - name: ListApplications
+        method: GET
+        description: List Applications
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: CreateApplication
+        method: POST
+        description: Create Application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: GetApplication
+        method: GET
+        description: Get Application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: DeleteApplication
+        method: DELETE
+        description: Delete Application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: ListConversations
+        method: GET
+        description: List Conversations
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: ChatSync
+        method: POST
+        description: Chat Sync
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: ListDataSources
+        method: GET
+        description: List Data Sources
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: CreateDataSource
+        method: POST
+        description: Create Data Source
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: ListIndices
+        method: GET
+        description: List Indices
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: CreateIndex
+        method: POST
+        description: Create Index
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
   exposes:
   - type: rest
     port: 8080
