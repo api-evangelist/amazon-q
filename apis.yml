@@ -192,15 +192,15 @@ common:
   url: https://repost.aws/tags/TALmcXzmfeRaKOzrBowJ9cJQ/amazon-q
 - type: GitHubOrganization
   url: https://github.com/aws
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-q-openapi-application-context.jsonld
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-q-openapi-conversation-context.jsonld
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-q-openapi-data-source-context.jsonld
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-q-openapi-index-context.jsonld
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/amazon-q-openapi-message-context.jsonld
 - type: JSONSchema
   url: json-schema/amazon-q-openapi-application-schema.json
