@@ -1,0 +1,195 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon Q Business API — Applications
+  description: 'Amazon Q Business API — Applications. 4 operations. Lead operation: List Applications. Self-contained Naftiko
+    capability covering one Amazon Q business surface.'
+  tags:
+  - Amazon Q
+  - Applications
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_Q_API_KEY: AMAZON_Q_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-q-applications
+    baseUri: https://qbusiness.{region}.amazonaws.com
+    description: Amazon Q Business API — Applications business capability. Self-contained, no shared references.
+    resources:
+    - name: applications
+      path: /applications
+      operations:
+      - name: listapplications
+        method: GET
+        description: List Applications
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: maxResults
+          in: query
+          type: integer
+        - name: nextToken
+          in: query
+          type: string
+      - name: createapplication
+        method: POST
+        description: Create Application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: applications-applicationId
+      path: /applications/{applicationId}
+      operations:
+      - name: getapplication
+        method: GET
+        description: Get Application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: applicationId
+          in: path
+          type: string
+          required: true
+      - name: deleteapplication
+        method: DELETE
+        description: Delete Application
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: applicationId
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_Q_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-q-applications-rest
+    port: 8080
+    description: REST adapter for Amazon Q Business API — Applications. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/applications
+      name: applications
+      description: REST surface for applications.
+      operations:
+      - method: GET
+        name: listapplications
+        description: List Applications
+        call: amazon-q-applications.listapplications
+        with:
+          maxResults: rest.maxResults
+          nextToken: rest.nextToken
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createapplication
+        description: Create Application
+        call: amazon-q-applications.createapplication
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/applications/{applicationid}
+      name: applications-applicationid
+      description: REST surface for applications-applicationId.
+      operations:
+      - method: GET
+        name: getapplication
+        description: Get Application
+        call: amazon-q-applications.getapplication
+        with:
+          applicationId: rest.applicationId
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteapplication
+        description: Delete Application
+        call: amazon-q-applications.deleteapplication
+        with:
+          applicationId: rest.applicationId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-q-applications-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon Q Business API — Applications. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: list-applications
+      description: List Applications
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-q-applications.listapplications
+      with:
+        maxResults: tools.maxResults
+        nextToken: tools.nextToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-application
+      description: Create Application
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-q-applications.createapplication
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-application
+      description: Get Application
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-q-applications.getapplication
+      with:
+        applicationId: tools.applicationId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-application
+      description: Delete Application
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-q-applications.deleteapplication
+      with:
+        applicationId: tools.applicationId
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,128 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon Q Business API — Data Sources
+  description: 'Amazon Q Business API — Data Sources. 2 operations. Lead operation: List Data Sources. Self-contained Naftiko
+    capability covering one Amazon Q business surface.'
+  tags:
+  - Amazon Q
+  - Data Sources
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_Q_API_KEY: AMAZON_Q_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-q-data-sources
+    baseUri: https://qbusiness.{region}.amazonaws.com
+    description: Amazon Q Business API — Data Sources business capability. Self-contained, no shared references.
+    resources:
+    - name: applications-applicationId-datasources
+      path: /applications/{applicationId}/datasources
+      operations:
+      - name: listdatasources
+        method: GET
+        description: List Data Sources
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: applicationId
+          in: path
+          type: string
+          required: true
+        - name: indexId
+          in: query
+          type: string
+          required: true
+      - name: createdatasource
+        method: POST
+        description: Create Data Source
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: applicationId
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_Q_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-q-data-sources-rest
+    port: 8080
+    description: REST adapter for Amazon Q Business API — Data Sources. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/applications/{applicationid}/datasources
+      name: applications-applicationid-datasources
+      description: REST surface for applications-applicationId-datasources.
+      operations:
+      - method: GET
+        name: listdatasources
+        description: List Data Sources
+        call: amazon-q-data-sources.listdatasources
+        with:
+          applicationId: rest.applicationId
+          indexId: rest.indexId
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createdatasource
+        description: Create Data Source
+        call: amazon-q-data-sources.createdatasource
+        with:
+          applicationId: rest.applicationId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-q-data-sources-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon Q Business API — Data Sources. One tool per consumed operation, routed inline through
+      this capability's consumes block.
+    tools:
+    - name: list-data-sources
+      description: List Data Sources
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-q-data-sources.listdatasources
+      with:
+        applicationId: tools.applicationId
+        indexId: tools.indexId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-data-source
+      description: Create Data Source
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-q-data-sources.createdatasource
+      with:
+        applicationId: tools.applicationId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
