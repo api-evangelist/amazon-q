@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/components/schemas/DataSource",
+  "title": "DataSource",
+  "type": "object",
+  "properties": {
+    "dataSourceId": {
+      "type": "string",
+      "description": "The unique identifier of the data source."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "The name of the data source."
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of data source connector."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PENDING_CREATION",
+        "CREATING",
+        "ACTIVE",
+        "DELETING",
+        "UPDATING",
+        "NEEDS_ATTENTION",
+        "FAILED"
+      ],
+      "description": "The status of the data source."
+    }
+  }
+}

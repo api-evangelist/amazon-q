@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/components/schemas/Conversation",
+  "title": "Conversation",
+  "type": "object",
+  "properties": {
+    "conversationId": {
+      "type": "string",
+      "description": "The unique identifier of the conversation."
+    },
+    "title": {
+      "type": "string",
+      "description": "The title of the conversation."
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date and time the conversation was created."
+    }
+  }
+}

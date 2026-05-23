@@ -1,0 +1,132 @@
+{
+  "provider": "Amazon Q",
+  "providerId": "amazon-q",
+  "kind": "json-structure",
+  "description": "Structural overview of the Amazon Q API surface; extracted from openapi/.",
+  "schemaCount": 5,
+  "operationCount": 10,
+  "schemas": [
+    {
+      "name": "Application",
+      "type": "object",
+      "propertyCount": 5,
+      "required": []
+    },
+    {
+      "name": "Conversation",
+      "type": "object",
+      "propertyCount": 3,
+      "required": []
+    },
+    {
+      "name": "Message",
+      "type": "object",
+      "propertyCount": 4,
+      "required": []
+    },
+    {
+      "name": "DataSource",
+      "type": "object",
+      "propertyCount": 4,
+      "required": []
+    },
+    {
+      "name": "Index",
+      "type": "object",
+      "propertyCount": 3,
+      "required": []
+    }
+  ],
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/applications",
+      "operationId": "ListApplications",
+      "summary": "List Applications",
+      "tags": [
+        "Applications"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/applications",
+      "operationId": "CreateApplication",
+      "summary": "Create Application",
+      "tags": [
+        "Applications"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/applications/{applicationId}",
+      "operationId": "GetApplication",
+      "summary": "Get Application",
+      "tags": [
+        "Applications"
+      ]
+    },
+    {
+      "method": "DELETE",
+      "path": "/applications/{applicationId}",
+      "operationId": "DeleteApplication",
+      "summary": "Delete Application",
+      "tags": [
+        "Applications"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/applications/{applicationId}/conversations",
+      "operationId": "ListConversations",
+      "summary": "List Conversations",
+      "tags": [
+        "Conversations"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/applications/{applicationId}/conversations",
+      "operationId": "ChatSync",
+      "summary": "Chat Sync",
+      "tags": [
+        "Conversations"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/applications/{applicationId}/datasources",
+      "operationId": "ListDataSources",
+      "summary": "List Data Sources",
+      "tags": [
+        "Data Sources"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/applications/{applicationId}/datasources",
+      "operationId": "CreateDataSource",
+      "summary": "Create Data Source",
+      "tags": [
+        "Data Sources"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/applications/{applicationId}/indices",
+      "operationId": "ListIndices",
+      "summary": "List Indices",
+      "tags": [
+        "Indices"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/applications/{applicationId}/indices",
+      "operationId": "CreateIndex",
+      "summary": "Create Index",
+      "tags": [
+        "Indices"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/components/schemas/Application",
+  "title": "Application",
+  "type": "object",
+  "properties": {
+    "applicationId": {
+      "type": "string",
+      "description": "The unique identifier of the Amazon Q application."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "The name of the Amazon Q application."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CREATING",
+        "ACTIVE",
+        "DELETING",
+        "FAILED",
+        "UPDATING"
+      ],
+      "description": "The status of the Amazon Q application."
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date and time the application was created."
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date and time the application was last updated."
+    }
+  }
+}

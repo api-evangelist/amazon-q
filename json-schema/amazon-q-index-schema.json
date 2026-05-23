@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "#/components/schemas/Index",
+  "title": "Index",
+  "type": "object",
+  "properties": {
+    "indexId": {
+      "type": "string",
+      "description": "The unique identifier of the index."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "The name of the index."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "CREATING",
+        "ACTIVE",
+        "DELETING",
+        "FAILED",
+        "UPDATING"
+      ],
+      "description": "The status of the index."
+    }
+  }
+}
