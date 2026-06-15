@@ -1,0 +1,249 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Q Business API",
+    "version": "Sun Nov 26 2023 19:00:00 GMT-0500 (Eastern Standard Time)"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Applications",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Applications",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://qbusiness.{region}.amazonaws.com/applications",
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lists Amazon Q Business applications."
+        },
+        {
+          "info": {
+            "name": "Create Application",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://qbusiness.{region}.amazonaws.com/applications",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates an Amazon Q Business application."
+        },
+        {
+          "info": {
+            "name": "Get Application",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://qbusiness.{region}.amazonaws.com/applications/:applicationId",
+            "params": [
+              {
+                "name": "applicationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Gets information about an Amazon Q Business application."
+        },
+        {
+          "info": {
+            "name": "Delete Application",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://qbusiness.{region}.amazonaws.com/applications/:applicationId",
+            "params": [
+              {
+                "name": "applicationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes an Amazon Q Business application."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Conversations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Conversations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://qbusiness.{region}.amazonaws.com/applications/:applicationId/conversations",
+            "params": [
+              {
+                "name": "applicationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists one or more Amazon Q Business conversations."
+        },
+        {
+          "info": {
+            "name": "Chat Sync",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://qbusiness.{region}.amazonaws.com/applications/:applicationId/conversations",
+            "params": [
+              {
+                "name": "applicationId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Starts or continues a synchronous Amazon Q Business conversation."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Data Sources",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Data Sources",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://qbusiness.{region}.amazonaws.com/applications/:applicationId/datasources",
+            "params": [
+              {
+                "name": "applicationId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "indexId",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Lists Amazon Q Business data sources for a retriever-based application."
+        },
+        {
+          "info": {
+            "name": "Create Data Source",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://qbusiness.{region}.amazonaws.com/applications/:applicationId/datasources",
+            "params": [
+              {
+                "name": "applicationId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates a data source connector for an Amazon Q Business application."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Indices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Indices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://qbusiness.{region}.amazonaws.com/applications/:applicationId/indices",
+            "params": [
+              {
+                "name": "applicationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists the Amazon Q Business indices you have created."
+        },
+        {
+          "info": {
+            "name": "Create Index",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://qbusiness.{region}.amazonaws.com/applications/:applicationId/indices",
+            "params": [
+              {
+                "name": "applicationId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates an Amazon Q Business index."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,1201 @@
+{
+  "item": [
+    {
+      "id": "d6d1ac0c-a865-4867-9273-c6bb04db5229",
+      "name": "Applications",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4ea8cfb3-a123-410f-b458-76f6c1b228cd",
+          "name": "List Applications",
+          "request": {
+            "name": "List Applications",
+            "description": {
+              "content": "Lists Amazon Q Business applications.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "applications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "nextToken",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8ffd46db-d200-43a2-a226-d1d7a5cf7279",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "applications"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b4c3105e-c6db-4ae7-a469-4309bd4c8674",
+          "name": "Create Application",
+          "request": {
+            "name": "Create Application",
+            "description": {
+              "content": "Creates an Amazon Q Business application.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "applications"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1907e02a-a4a9-43d2-b083-dd700fffcd40",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "applications"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"applicationId\": \"string\",\n  \"displayName\": \"string\",\n  \"status\": \"ACTIVE\",\n  \"createdAt\": \"1947-06-13T10:18:55.852Z\",\n  \"updatedAt\": \"2010-02-24T04:41:35.608Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8587c3e2-e739-4897-bf0f-8069783b8947",
+          "name": "Get Application",
+          "request": {
+            "name": "Get Application",
+            "description": {
+              "content": "Gets information about an Amazon Q Business application.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "applications",
+                ":applicationId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "applicationId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "397f09d1-24fc-41da-afc3-44ef713c2d2d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "applications",
+                    ":applicationId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "applicationId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"applicationId\": \"string\",\n  \"displayName\": \"string\",\n  \"status\": \"ACTIVE\",\n  \"createdAt\": \"1947-06-13T10:18:55.852Z\",\n  \"updatedAt\": \"2010-02-24T04:41:35.608Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "169339a6-d06a-45cd-a17f-5f038c89656f",
+          "name": "Delete Application",
+          "request": {
+            "name": "Delete Application",
+            "description": {
+              "content": "Deletes an Amazon Q Business application.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "applications",
+                ":applicationId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "applicationId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c7d9270c-372b-4d71-b7f8-cae168d7db8d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "applications",
+                    ":applicationId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "applicationId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "fe5383d5-6c3a-4ae0-b08d-146a4f65330c",
+      "name": "Conversations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "45bc3f47-74c4-4704-a7ef-35718f8590d1",
+          "name": "List Conversations",
+          "request": {
+            "name": "List Conversations",
+            "description": {
+              "content": "Lists one or more Amazon Q Business conversations.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "applications",
+                ":applicationId",
+                "conversations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "applicationId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "add5bec0-3bc6-406e-9f36-80fe23429f1b",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "applications",
+                    ":applicationId",
+                    "conversations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "applicationId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f3c416f9-9684-4e90-b07d-736b99221991",
+          "name": "Chat Sync",
+          "request": {
+            "name": "Chat Sync",
+            "description": {
+              "content": "Starts or continues a synchronous Amazon Q Business conversation.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "applications",
+                ":applicationId",
+                "conversations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "applicationId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userMessage\": \"<string>\",\n  \"conversationId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7b8db5e2-6971-44db-804a-08f4ba7ea453",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "applications",
+                    ":applicationId",
+                    "conversations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "applicationId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userMessage\": \"<string>\",\n  \"conversationId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "5aec5525-f3c6-4964-b1e7-b23ed1ac9de2",
+      "name": "Data Sources",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9d90c1ca-4638-41e9-b4f4-0e0b87d8c784",
+          "name": "List Data Sources",
+          "request": {
+            "name": "List Data Sources",
+            "description": {
+              "content": "Lists Amazon Q Business data sources for a retriever-based application.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "applications",
+                ":applicationId",
+                "datasources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "indexId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "applicationId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6b9f7d06-eed7-44ad-8bba-5534a4cb1e73",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "applications",
+                    ":applicationId",
+                    "datasources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "indexId",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "applicationId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4c6c2eb4-ac40-4b08-bdda-a9f415252cbd",
+          "name": "Create Data Source",
+          "request": {
+            "name": "Create Data Source",
+            "description": {
+              "content": "Creates a data source connector for an Amazon Q Business application.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "applications",
+                ":applicationId",
+                "datasources"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "applicationId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"dataSourceId\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"type\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3642adfe-93d1-4138-81eb-4f3009ffa564",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "applications",
+                    ":applicationId",
+                    "datasources"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "applicationId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"dataSourceId\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"type\": \"<string>\",\n  \"status\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "f02cc9fa-0f44-4753-b78a-41378ccb42fc",
+      "name": "Indices",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "80db942e-a7c0-49cb-9fd4-bbf6d261b18f",
+          "name": "List Indices",
+          "request": {
+            "name": "List Indices",
+            "description": {
+              "content": "Lists the Amazon Q Business indices you have created.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "applications",
+                ":applicationId",
+                "indices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "applicationId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e58c51c4-e54d-44f0-a828-a9f18ff5a338",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "applications",
+                    ":applicationId",
+                    "indices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "applicationId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "039d222e-ee2a-4952-8509-923834626bad",
+          "name": "Create Index",
+          "request": {
+            "name": "Create Index",
+            "description": {
+              "content": "Creates an Amazon Q Business index.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "applications",
+                ":applicationId",
+                "indices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "applicationId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "AWS region",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"displayName\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "21755238-66ed-417a-aab5-97e00eb0bc3d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "applications",
+                    ":applicationId",
+                    "indices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "applicationId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "AWS region",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"displayName\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"indexId\": \"string\",\n  \"displayName\": \"string\",\n  \"status\": \"DELETING\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "AWS region",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://qbusiness.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "80c76389-1969-4747-b825-938186c8d231",
+    "name": "Amazon Q Business API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Amazon Q Business is a generative AI-powered enterprise assistant that enables employees to ask questions, get summaries, generate content, and take actions using enterprise data.\n\nContact Support:\n Name: AWS Support",
+      "type": "text/plain"
+    }
+  }
+}
