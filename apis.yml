@@ -4,7 +4,7 @@ description: >-
   content, and taking actions based on your enterprise data and systems. It is available in multiple product variants
   including Amazon Q Business for enterprise knowledge, Amazon Q Developer for software development, and Amazon Q in
   Connect for customer service agents.
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/amazon-q/refs/heads/main/apis.yml
 created: 2024-01-15T00:00:00.000Z
 modified: '2026-05-19'
@@ -21,7 +21,7 @@ apis:
       API for Amazon Q Business, a fully managed generative AI-powered enterprise chat assistant that you can deploy
       within your organization. It enables employees to ask questions, get summaries, generate content, and complete
       tasks using enterprise data from connected data sources with permissions-aware responses.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://aws.amazon.com/q/business/
     baseURL: https://qbusiness.{region}.amazonaws.com
     tags:
@@ -60,7 +60,7 @@ apis:
       API for Amazon Q Apps, a feature within Amazon Q Business that allows web experience users to create lightweight,
       purpose-built AI apps to fulfill specific tasks using their enterprise data. It supports creating, managing,
       sharing, and running custom Q Apps through a library system.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.aws.amazon.com/amazonq/latest/api-reference/API_Operations_QApps.html
     baseURL: https://qbusiness.{region}.amazonaws.com
     tags:
@@ -78,7 +78,7 @@ apis:
       API for Amazon Q Developer, the most capable generative AI-powered assistant for software development. It provides
       inline code suggestions, chat-based coding assistance, security scanning, code transformations, and agentic
       feature development across IDEs, the CLI, and the AWS Management Console.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://aws.amazon.com/q/developer/
     baseURL: https://q.{region}.amazonaws.com
     tags:
@@ -116,7 +116,7 @@ apis:
       automatically detects customer intent during calls and chats using conversational analytics and natural language
       understanding, then provides contact center agents with real-time generative responses, suggested actions, and
       links to relevant documents.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://aws.amazon.com/connect/q/
     baseURL: https://wisdom.{region}.amazonaws.com
     tags:
@@ -141,7 +141,7 @@ apis:
       API for Amazon Q Developer in chat applications, which enables integration of Amazon Q Developer capabilities into
       messaging platforms. It provides descriptions, request parameters, and response formats for interacting with
       Amazon Q Developer through chat-based interfaces.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.aws.amazon.com/chatbot/latest/APIReference/Welcome.html
     baseURL: https://chatbot.{region}.amazonaws.com
     tags:
