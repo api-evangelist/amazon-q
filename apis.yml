@@ -49,9 +49,9 @@ apis:
         url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html
       - type: CLI
         url: https://docs.aws.amazon.com/cli/latest/reference/qbusiness/
-      - type: SDK
+      - type: SDKs
         url: https://aws.amazon.com/tools/
-      - type: Quotas
+      - type: RateLimits
         url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/quotas-regions.html
       - type: ChangeLog
         url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/doc-history.html
@@ -102,9 +102,9 @@ apis:
         url: https://aws.amazon.com/q/developer/features/
       - type: Documentation
         url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html
-      - type: Quotas
+      - type: RateLimits
         url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/quotas.html
-      - type: SDK
+      - type: SDKs
         url: https://aws.amazon.com/tools/
       - type: ChangeLog
         url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/doc-history.html
@@ -132,7 +132,7 @@ apis:
         url: https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_Q_Connect.html
       - type: CLI
         url: https://docs.aws.amazon.com/cli/latest/reference/qconnect/
-      - type: SDK
+      - type: SDKs
         url: https://aws.amazon.com/tools/
       - type: GitHubRepository
         url: https://github.com/aws/amazon-q-connectjs
@@ -175,11 +175,11 @@ common:
     url: https://aws.amazon.com/q/pricing/
   - type: StatusPage
     url: https://health.aws.amazon.com/health/status
-  - type: SDK
+  - type: SDKs
     url: https://aws.amazon.com/tools/
   - type: Portal
     url: https://console.aws.amazon.com/
-  - type: SignUp
+  - type: Signup
     url: https://portal.aws.amazon.com/billing/signup
   - type: Community
     url: https://repost.aws/tags/TALmcXzmfeRaKOzrBowJ9cJQ/amazon-q
@@ -215,15 +215,15 @@ common:
     url: json-structure/amazon-q-openapi-index-structure.json
   - type: JSONStructure
     url: json-structure/amazon-q-openapi-message-structure.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-q-openapi-application-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-q-openapi-conversation-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-q-openapi-data-source-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-q-openapi-index-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-q-openapi-message-example.json
   - type: SpectralRules
     url: rules/amazon-q-spectral-rules.yml
