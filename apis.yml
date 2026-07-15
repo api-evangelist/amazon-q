@@ -155,6 +155,8 @@ apis:
       - type: APIReference
         url: https://docs.aws.amazon.com/chatbot/latest/APIReference/Welcome.html
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-q-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-q-trust-center.yml
   - type: VulnerabilityDisclosure
