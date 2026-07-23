@@ -1,0 +1,94 @@
+openapi: 3.0.3
+info:
+  title: Amazon Q Business Applications Indices API
+  description: Amazon Q Business is a generative AI-powered enterprise assistant that enables employees to ask questions, get summaries, generate content, and take actions using enterprise data.
+  version: 2023-11-27
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://qbusiness.{region}.amazonaws.com
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+security:
+- sigv4: []
+tags:
+- name: Indices
+paths:
+  /applications/{applicationId}/indices:
+    get:
+      operationId: ListIndices
+      summary: List Indices
+      description: Lists the Amazon Q Business indices you have created.
+      tags:
+      - Indices
+      parameters:
+      - name: applicationId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+    post:
+      operationId: CreateIndex
+      summary: Create Index
+      description: Creates an Amazon Q Business index.
+      tags:
+      - Indices
+      parameters:
+      - name: applicationId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - displayName
+              properties:
+                displayName:
+                  type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Index'
+components:
+  schemas:
+    Index:
+      type: object
+      properties:
+        indexId:
+          type: string
+          description: The unique identifier of the index.
+        displayName:
+          type: string
+          description: The name of the index.
+        status:
+          type: string
+          enum:
+          - CREATING
+          - ACTIVE
+          - DELETING
+          - FAILED
+          - UPDATING
+          description: The status of the index.
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4

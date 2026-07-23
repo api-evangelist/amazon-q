@@ -1,0 +1,71 @@
+openapi: 3.0.3
+info:
+  title: Amazon Q Business Applications Conversations API
+  description: Amazon Q Business is a generative AI-powered enterprise assistant that enables employees to ask questions, get summaries, generate content, and take actions using enterprise data.
+  version: 2023-11-27
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://qbusiness.{region}.amazonaws.com
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+security:
+- sigv4: []
+tags:
+- name: Conversations
+paths:
+  /applications/{applicationId}/conversations:
+    get:
+      operationId: ListConversations
+      summary: List Conversations
+      description: Lists one or more Amazon Q Business conversations.
+      tags:
+      - Conversations
+      parameters:
+      - name: applicationId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+    post:
+      operationId: ChatSync
+      summary: Chat Sync
+      description: Starts or continues a synchronous Amazon Q Business conversation.
+      tags:
+      - Conversations
+      parameters:
+      - name: applicationId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userMessage:
+                  type: string
+                conversationId:
+                  type: string
+      responses:
+        '200':
+          description: Success
+components:
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4

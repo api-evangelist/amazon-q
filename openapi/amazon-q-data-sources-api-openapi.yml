@@ -1,0 +1,95 @@
+openapi: 3.0.3
+info:
+  title: Amazon Q Business Applications Data Sources API
+  description: Amazon Q Business is a generative AI-powered enterprise assistant that enables employees to ask questions, get summaries, generate content, and take actions using enterprise data.
+  version: 2023-11-27
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://qbusiness.{region}.amazonaws.com
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+security:
+- sigv4: []
+tags:
+- name: Data Sources
+paths:
+  /applications/{applicationId}/datasources:
+    get:
+      operationId: ListDataSources
+      summary: List Data Sources
+      description: Lists Amazon Q Business data sources for a retriever-based application.
+      tags:
+      - Data Sources
+      parameters:
+      - name: applicationId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: indexId
+        in: query
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+    post:
+      operationId: CreateDataSource
+      summary: Create Data Source
+      description: Creates a data source connector for an Amazon Q Business application.
+      tags:
+      - Data Sources
+      parameters:
+      - name: applicationId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataSource'
+      responses:
+        '200':
+          description: Success
+components:
+  schemas:
+    DataSource:
+      type: object
+      properties:
+        dataSourceId:
+          type: string
+          description: The unique identifier of the data source.
+        displayName:
+          type: string
+          description: The name of the data source.
+        type:
+          type: string
+          description: The type of data source connector.
+        status:
+          type: string
+          enum:
+          - PENDING_CREATION
+          - CREATING
+          - ACTIVE
+          - DELETING
+          - UPDATING
+          - NEEDS_ATTENTION
+          - FAILED
+          description: The status of the data source.
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4

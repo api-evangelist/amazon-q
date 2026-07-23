@@ -1,0 +1,136 @@
+openapi: 3.0.3
+info:
+  title: Amazon Q Business Applications API
+  description: Amazon Q Business is a generative AI-powered enterprise assistant that enables employees to ask questions, get summaries, generate content, and take actions using enterprise data.
+  version: 2023-11-27
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://qbusiness.{region}.amazonaws.com
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+security:
+- sigv4: []
+tags:
+- name: Applications
+paths:
+  /applications:
+    get:
+      operationId: ListApplications
+      summary: List Applications
+      description: Lists Amazon Q Business applications.
+      tags:
+      - Applications
+      parameters:
+      - name: maxResults
+        in: query
+        schema:
+          type: integer
+      - name: nextToken
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+    post:
+      operationId: CreateApplication
+      summary: Create Application
+      description: Creates an Amazon Q Business application.
+      tags:
+      - Applications
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - displayName
+              properties:
+                displayName:
+                  type: string
+                description:
+                  type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Application'
+  /applications/{applicationId}:
+    get:
+      operationId: GetApplication
+      summary: Get Application
+      description: Gets information about an Amazon Q Business application.
+      tags:
+      - Applications
+      parameters:
+      - name: applicationId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Application'
+    delete:
+      operationId: DeleteApplication
+      summary: Delete Application
+      description: Deletes an Amazon Q Business application.
+      tags:
+      - Applications
+      parameters:
+      - name: applicationId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+components:
+  schemas:
+    Application:
+      type: object
+      properties:
+        applicationId:
+          type: string
+          description: The unique identifier of the Amazon Q application.
+        displayName:
+          type: string
+          description: The name of the Amazon Q application.
+        status:
+          type: string
+          enum:
+          - CREATING
+          - ACTIVE
+          - DELETING
+          - FAILED
+          - UPDATING
+          description: The status of the Amazon Q application.
+        createdAt:
+          type: string
+          format: date-time
+          description: The date and time the application was created.
+        updatedAt:
+          type: string
+          format: date-time
+          description: The date and time the application was last updated.
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
