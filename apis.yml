@@ -4,7 +4,20 @@ description: >-
   content, and taking actions based on your enterprise data and systems. It is available in multiple product variants
   including Amazon Q Business for enterprise knowledge, Amazon Q Developer for software development, and Amazon Q in
   Connect for customer service agents.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: true
+  try_now: true
+  public: false
+  label: Freemium (free trial) · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-q.png
 url: https://raw.githubusercontent.com/api-evangelist/amazon-q/refs/heads/main/apis.yml
 created: 2024-01-15T00:00:00.000Z
 modified: '2026-05-19'
@@ -16,145 +29,272 @@ tags:
   - Enterprise
   - Generative AI
 apis:
-  - name: Amazon Q Business API
-    description: >-
-      API for Amazon Q Business, a fully managed generative AI-powered enterprise chat assistant that you can deploy
-      within your organization. It enables employees to ask questions, get summaries, generate content, and complete
-      tasks using enterprise data from connected data sources with permissions-aware responses.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://aws.amazon.com/q/business/
-    baseURL: https://qbusiness.{region}.amazonaws.com
-    tags:
-      - Business Intelligence
-      - Enterprise
-      - Generative AI
-      - Knowledge Management
-      - Q&A
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/
-      - type: OpenAPI
-        url: https://example.com/openapi/amazon-q-business.json
-      - type: Authentication
-        url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/security-iam.html
-      - type: Pricing
-        url: https://aws.amazon.com/q/business/pricing/
-      - type: APIReference
-        url: https://docs.aws.amazon.com/amazonq/latest/api-reference/Welcome.html
-      - type: GettingStarted
-        url: https://aws.amazon.com/q/business/getting-started/
-      - type: Features
-        url: https://aws.amazon.com/q/business/features/
-      - type: Documentation
-        url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html
-      - type: CLI
-        url: https://docs.aws.amazon.com/cli/latest/reference/qbusiness/
-      - type: SDKs
-        url: https://aws.amazon.com/tools/
-      - type: RateLimits
-        url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/quotas-regions.html
-      - type: ChangeLog
-        url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/doc-history.html
-  - name: Amazon Q Business QApps API
-    description: >-
-      API for Amazon Q Apps, a feature within Amazon Q Business that allows web experience users to create lightweight,
-      purpose-built AI apps to fulfill specific tasks using their enterprise data. It supports creating, managing,
-      sharing, and running custom Q Apps through a library system.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://docs.aws.amazon.com/amazonq/latest/api-reference/API_Operations_QApps.html
-    baseURL: https://qbusiness.{region}.amazonaws.com
-    tags:
-      - Applications
-      - Enterprise
-      - Generative AI
-      - Low Code
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/
-      - type: APIReference
-        url: https://docs.aws.amazon.com/amazonq/latest/api-reference/API_Operations_QApps.html
-  - name: Amazon Q Developer API
-    description: >-
-      API for Amazon Q Developer, the most capable generative AI-powered assistant for software development. It provides
-      inline code suggestions, chat-based coding assistance, security scanning, code transformations, and agentic
-      feature development across IDEs, the CLI, and the AWS Management Console.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://aws.amazon.com/q/developer/
-    baseURL: https://q.{region}.amazonaws.com
-    tags:
-      - AI Assistant
-      - Code Generation
-      - Developer Tools
-      - IDE Integration
-      - Security Scanning
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/
-      - type: OpenAPI
-        url: https://example.com/openapi/amazon-q-developer.json
-      - type: Authentication
-        url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security-iam.html
-      - type: Pricing
-        url: https://aws.amazon.com/q/developer/pricing/
-      - type: GettingStarted
-        url: https://aws.amazon.com/q/developer/getting-started/
-      - type: Features
-        url: https://aws.amazon.com/q/developer/features/
-      - type: Documentation
-        url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html
-      - type: RateLimits
-        url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/quotas.html
-      - type: SDKs
-        url: https://aws.amazon.com/tools/
-      - type: ChangeLog
-        url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/doc-history.html
-      - type: GitHubRepository
-        url: https://github.com/aws/amazon-q-developer-cli
-  - name: Amazon Q Connect API
-    description: >-
-      API for Amazon Q in Connect, a generative AI-powered customer service assistant integrated with Amazon Connect. It
-      automatically detects customer intent during calls and chats using conversational analytics and natural language
-      understanding, then provides contact center agents with real-time generative responses, suggested actions, and
-      links to relevant documents.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://aws.amazon.com/connect/q/
-    baseURL: https://wisdom.{region}.amazonaws.com
-    tags:
-      - Agent Assistance
-      - Contact Center
-      - Customer Service
-      - Generative AI
-      - Real-Time
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/connect/latest/adminguide/amazon-q-connect.html
-      - type: APIReference
-        url: https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_Q_Connect.html
-      - type: CLI
-        url: https://docs.aws.amazon.com/cli/latest/reference/qconnect/
-      - type: SDKs
-        url: https://aws.amazon.com/tools/
-      - type: GitHubRepository
-        url: https://github.com/aws/amazon-q-connectjs
-  - name: Amazon Q Developer in Chat Applications API
-    description: >-
-      API for Amazon Q Developer in chat applications, which enables integration of Amazon Q Developer capabilities into
-      messaging platforms. It provides descriptions, request parameters, and response formats for interacting with
-      Amazon Q Developer through chat-based interfaces.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://docs.aws.amazon.com/chatbot/latest/APIReference/Welcome.html
-    baseURL: https://chatbot.{region}.amazonaws.com
-    tags:
-      - Chat
-      - Developer Tools
-      - Integration
-      - Messaging
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/chatbot/latest/APIReference/Welcome.html
-      - type: APIReference
-        url: https://docs.aws.amazon.com/chatbot/latest/APIReference/Welcome.html
+- name: Amazon Q Business QApps API
+  description: >-
+    API for Amazon Q Apps, a feature within Amazon Q Business that allows web experience users to create
+    lightweight, purpose-built AI apps to fulfill specific tasks using their enterprise data. It supports
+    creating, managing, sharing, and running custom Q Apps through a library system.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.aws.amazon.com/amazonq/latest/api-reference/API_Operations_QApps.html
+  baseURL: https://qbusiness.{region}.amazonaws.com
+  tags:
+  - Applications
+  - Enterprise
+  - Generative AI
+  - Low Code
+  properties:
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/amazonq/latest/api-reference/API_Operations_QApps.html
+- name: Amazon Q Connect API
+  description: >-
+    API for Amazon Q in Connect, a generative AI-powered customer service assistant integrated with Amazon
+    Connect. It automatically detects customer intent during calls and chats using conversational analytics
+    and natural language understanding, then provides contact center agents with real-time generative
+    responses, suggested actions, and links to relevant documents.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://aws.amazon.com/connect/q/
+  baseURL: https://wisdom.{region}.amazonaws.com
+  tags:
+  - Agent Assistance
+  - Contact Center
+  - Customer Service
+  - Generative AI
+  - Real-Time
+  properties:
+  - type: Documentation
+    url: https://docs.aws.amazon.com/connect/latest/adminguide/amazon-q-connect.html
+  - type: APIReference
+    url: >-
+      https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_Q_Connect.html
+  - type: CLI
+    url: https://docs.aws.amazon.com/cli/latest/reference/qconnect/
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: GitHubRepository
+    url: https://github.com/aws/amazon-q-connectjs
+- name: Amazon Q Developer in Chat Applications API
+  description: >-
+    API for Amazon Q Developer in chat applications, which enables integration of Amazon Q Developer capabilities
+    into messaging platforms. It provides descriptions, request parameters, and response formats for interacting
+    with Amazon Q Developer through chat-based interfaces.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.aws.amazon.com/chatbot/latest/APIReference/Welcome.html
+  baseURL: https://chatbot.{region}.amazonaws.com
+  tags:
+  - Chat
+  - Developer Tools
+  - Integration
+  - Messaging
+  properties:
+  - type: Documentation
+    url: https://docs.aws.amazon.com/chatbot/latest/APIReference/Welcome.html
+  - type: APIReference
+    url: https://docs.aws.amazon.com/chatbot/latest/APIReference/Welcome.html
+- aid: amazon-q:amazon-q-applications-api
+  name: Amazon Q Applications API
+  description: The Applications API from Amazon Q — 2 operation(s) for applications.
+  humanURL: https://aws.amazon.com/q/business/
+  baseURL: https://qbusiness.{region}.amazonaws.com
+  tags:
+  - Applications
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-q-applications-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/security-iam.html
+  - type: Pricing
+    url: https://aws.amazon.com/q/business/pricing/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/amazonq/latest/api-reference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/q/business/getting-started/
+  - type: Features
+    url: https://aws.amazon.com/q/business/features/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html
+  - type: CLI
+    url: https://docs.aws.amazon.com/cli/latest/reference/qbusiness/
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/quotas-regions.html
+  - type: ChangeLog
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/doc-history.html
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security-iam.html
+  - type: Pricing
+    url: https://aws.amazon.com/q/developer/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/q/developer/getting-started/
+  - type: Features
+    url: https://aws.amazon.com/q/developer/features/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/quotas.html
+  - type: ChangeLog
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/doc-history.html
+  - type: GitHubRepository
+    url: https://github.com/aws/amazon-q-developer-cli
+- aid: amazon-q:amazon-q-conversations-api
+  name: Amazon Q Conversations API
+  description: The Conversations API from Amazon Q — 1 operation(s) for conversations.
+  humanURL: https://aws.amazon.com/q/business/
+  baseURL: https://qbusiness.{region}.amazonaws.com
+  tags:
+  - Conversations
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-q-conversations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/security-iam.html
+  - type: Pricing
+    url: https://aws.amazon.com/q/business/pricing/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/amazonq/latest/api-reference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/q/business/getting-started/
+  - type: Features
+    url: https://aws.amazon.com/q/business/features/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html
+  - type: CLI
+    url: https://docs.aws.amazon.com/cli/latest/reference/qbusiness/
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/quotas-regions.html
+  - type: ChangeLog
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/doc-history.html
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security-iam.html
+  - type: Pricing
+    url: https://aws.amazon.com/q/developer/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/q/developer/getting-started/
+  - type: Features
+    url: https://aws.amazon.com/q/developer/features/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/quotas.html
+  - type: ChangeLog
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/doc-history.html
+  - type: GitHubRepository
+    url: https://github.com/aws/amazon-q-developer-cli
+- aid: amazon-q:amazon-q-data-sources-api
+  name: Amazon Q Data Sources API
+  description: The Data Sources API from Amazon Q — 1 operation(s) for data sources.
+  humanURL: https://aws.amazon.com/q/business/
+  baseURL: https://qbusiness.{region}.amazonaws.com
+  tags:
+  - Data Sources
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-q-data-sources-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/security-iam.html
+  - type: Pricing
+    url: https://aws.amazon.com/q/business/pricing/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/amazonq/latest/api-reference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/q/business/getting-started/
+  - type: Features
+    url: https://aws.amazon.com/q/business/features/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html
+  - type: CLI
+    url: https://docs.aws.amazon.com/cli/latest/reference/qbusiness/
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/quotas-regions.html
+  - type: ChangeLog
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/doc-history.html
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security-iam.html
+  - type: Pricing
+    url: https://aws.amazon.com/q/developer/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/q/developer/getting-started/
+  - type: Features
+    url: https://aws.amazon.com/q/developer/features/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/quotas.html
+  - type: ChangeLog
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/doc-history.html
+  - type: GitHubRepository
+    url: https://github.com/aws/amazon-q-developer-cli
+- aid: amazon-q:amazon-q-indices-api
+  name: Amazon Q Indices API
+  description: The Indices API from Amazon Q — 1 operation(s) for indices.
+  humanURL: https://aws.amazon.com/q/business/
+  baseURL: https://qbusiness.{region}.amazonaws.com
+  tags:
+  - Indices
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-q-indices-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/security-iam.html
+  - type: Pricing
+    url: https://aws.amazon.com/q/business/pricing/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/amazonq/latest/api-reference/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/q/business/getting-started/
+  - type: Features
+    url: https://aws.amazon.com/q/business/features/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html
+  - type: CLI
+    url: https://docs.aws.amazon.com/cli/latest/reference/qbusiness/
+  - type: SDKs
+    url: https://aws.amazon.com/tools/
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/quotas-regions.html
+  - type: ChangeLog
+    url: https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/doc-history.html
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/
+  - type: Authentication
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security-iam.html
+  - type: Pricing
+    url: https://aws.amazon.com/q/developer/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/q/developer/getting-started/
+  - type: Features
+    url: https://aws.amazon.com/q/developer/features/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/quotas.html
+  - type: ChangeLog
+    url: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/doc-history.html
+  - type: GitHubRepository
+    url: https://github.com/aws/amazon-q-developer-cli
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-q/overview
   - type: AgenticAccess
     url: agentic-access/amazon-q-agentic-access.yml
   - type: TrustCenter
