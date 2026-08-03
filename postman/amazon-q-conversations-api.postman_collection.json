@@ -1,0 +1,252 @@
+{
+  "info": {
+    "_postman_id": "342cb3c8-0650-43db-9a89-15ec53b4cac3",
+    "name": "Amazon Q Business Applications Conversations API",
+    "description": "Amazon Q Business is a generative AI-powered enterprise assistant that enables employees to ask questions, get summaries, generate content, and take actions using enterprise data.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:51:40.000Z",
+    "updatedAt": "2026-07-28T00:51:40.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-342cb3c8-0650-43db-9a89-15ec53b4cac3"
+  },
+  "item": [
+    {
+      "name": "applications",
+      "item": [
+        {
+          "name": "{applicationId}",
+          "item": [
+            {
+              "name": "conversations",
+              "item": [
+                {
+                  "name": "List Conversations",
+                  "id": "3ab58a24-5024-4737-bc47-3eaf57af1494",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/applications/:applicationId/conversations",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "applications",
+                        ":applicationId",
+                        "conversations"
+                      ],
+                      "variable": [
+                        {
+                          "id": "006db5ea-36c9-443c-acb8-70720f08e744",
+                          "key": "applicationId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Lists one or more Amazon Q Business conversations."
+                  },
+                  "response": [
+                    {
+                      "id": "f3628302-103b-4d06-aef1-fb9a7c06c545",
+                      "name": "Success",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/applications/:applicationId/conversations",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "applications",
+                            ":applicationId",
+                            "conversations"
+                          ],
+                          "variable": [
+                            {
+                              "key": "applicationId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:51:40.000Z",
+                      "updatedAt": "2026-07-28T00:51:40.000Z",
+                      "uid": "35240-f3628302-103b-4d06-aef1-fb9a7c06c545"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T00:51:40.000Z",
+                  "updatedAt": "2026-07-28T00:51:40.000Z",
+                  "uid": "35240-3ab58a24-5024-4737-bc47-3eaf57af1494"
+                },
+                {
+                  "name": "Chat Sync",
+                  "id": "9cf435f3-c783-4eb4-8bda-f9586bbb147c",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"userMessage\": \"<string>\",\n  \"conversationId\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/applications/:applicationId/conversations",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "applications",
+                        ":applicationId",
+                        "conversations"
+                      ],
+                      "variable": [
+                        {
+                          "id": "a751d74b-bb66-406e-ab00-7cb2f3536d6e",
+                          "key": "applicationId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Starts or continues a synchronous Amazon Q Business conversation."
+                  },
+                  "response": [
+                    {
+                      "id": "d15e8b2d-bcd3-497d-a140-2fdfc10b43de",
+                      "name": "Success",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"userMessage\": \"<string>\",\n  \"conversationId\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/applications/:applicationId/conversations",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "applications",
+                            ":applicationId",
+                            "conversations"
+                          ],
+                          "variable": [
+                            {
+                              "key": "applicationId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:51:40.000Z",
+                      "updatedAt": "2026-07-28T00:51:40.000Z",
+                      "uid": "35240-d15e8b2d-bcd3-497d-a140-2fdfc10b43de"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T00:51:40.000Z",
+                  "updatedAt": "2026-07-28T00:51:40.000Z",
+                  "uid": "35240-9cf435f3-c783-4eb4-8bda-f9586bbb147c"
+                }
+              ],
+              "id": "e1442866-bb4a-4888-9783-c6bb2aad22e5",
+              "createdAt": "2026-07-28T00:51:40.000Z",
+              "updatedAt": "2026-07-28T00:51:40.000Z",
+              "uid": "35240-e1442866-bb4a-4888-9783-c6bb2aad22e5"
+            }
+          ],
+          "id": "4cf0a4c2-adf2-4d7b-8b49-8f12e690e78a",
+          "createdAt": "2026-07-28T00:51:40.000Z",
+          "updatedAt": "2026-07-28T00:51:40.000Z",
+          "uid": "35240-4cf0a4c2-adf2-4d7b-8b49-8f12e690e78a"
+        }
+      ],
+      "id": "c25d2e07-d6dc-49cc-b8d6-c63ef1696210",
+      "createdAt": "2026-07-28T00:51:40.000Z",
+      "updatedAt": "2026-07-28T00:51:40.000Z",
+      "uid": "35240-c25d2e07-d6dc-49cc-b8d6-c63ef1696210"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://qbusiness.{{region}}.amazonaws.com"
+    }
+  ]
+}

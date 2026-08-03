@@ -1,0 +1,404 @@
+{
+  "info": {
+    "_postman_id": "a804bbd7-73a8-495d-ac26-f1a407039637",
+    "name": "Amazon Q Business Applications API",
+    "description": "Amazon Q Business is a generative AI-powered enterprise assistant that enables employees to ask questions, get summaries, generate content, and take actions using enterprise data.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:51:39.000Z",
+    "updatedAt": "2026-07-28T00:51:39.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-a804bbd7-73a8-495d-ac26-f1a407039637"
+  },
+  "item": [
+    {
+      "name": "applications",
+      "item": [
+        {
+          "name": "{applicationId}",
+          "item": [
+            {
+              "name": "Get Application",
+              "id": "26db1a24-a125-4cee-b63a-baf44605775a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/applications/:applicationId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "applications",
+                    ":applicationId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "d0d060ae-76b7-49fe-899e-8a02ac619bf3",
+                      "key": "applicationId",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "description": "Gets information about an Amazon Q Business application."
+              },
+              "response": [
+                {
+                  "id": "251e3b78-4285-42e3-80c6-90ad4a6355e5",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/applications/:applicationId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "applications",
+                        ":applicationId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "applicationId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"applicationId\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"status\": \"FAILED\",\n  \"createdAt\": \"<dateTime>\",\n  \"updatedAt\": \"<dateTime>\"\n}",
+                  "createdAt": "2026-07-28T00:51:39.000Z",
+                  "updatedAt": "2026-07-28T00:51:39.000Z",
+                  "uid": "35240-251e3b78-4285-42e3-80c6-90ad4a6355e5"
+                }
+              ],
+              "createdAt": "2026-07-28T00:51:39.000Z",
+              "updatedAt": "2026-07-28T00:51:39.000Z",
+              "uid": "35240-26db1a24-a125-4cee-b63a-baf44605775a"
+            },
+            {
+              "name": "Delete Application",
+              "id": "95ac19dc-bc3f-4de1-a926-f3f0ac87a995",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/applications/:applicationId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "applications",
+                    ":applicationId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "09fdbdb6-f97c-4a86-8ded-ea3d73ee829e",
+                      "key": "applicationId",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "description": "Deletes an Amazon Q Business application."
+              },
+              "response": [
+                {
+                  "id": "c3751167-f511-4482-a9e1-f9e6202a1716",
+                  "name": "Success",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: apikey",
+                        "key": "Authorization",
+                        "value": "<API Key>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/applications/:applicationId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "applications",
+                        ":applicationId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "applicationId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T00:51:39.000Z",
+                  "updatedAt": "2026-07-28T00:51:39.000Z",
+                  "uid": "35240-c3751167-f511-4482-a9e1-f9e6202a1716"
+                }
+              ],
+              "createdAt": "2026-07-28T00:51:39.000Z",
+              "updatedAt": "2026-07-28T00:51:39.000Z",
+              "uid": "35240-95ac19dc-bc3f-4de1-a926-f3f0ac87a995"
+            }
+          ],
+          "id": "c42b5c91-d45a-4f4e-a620-78dc94247ca5",
+          "createdAt": "2026-07-28T00:51:39.000Z",
+          "updatedAt": "2026-07-28T00:51:39.000Z",
+          "uid": "35240-c42b5c91-d45a-4f4e-a620-78dc94247ca5"
+        },
+        {
+          "name": "List Applications",
+          "id": "1057a784-61d5-4625-95c2-74dc099f353e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/applications?maxResults=<integer>&nextToken=<string>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "applications"
+              ],
+              "query": [
+                {
+                  "key": "maxResults",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "nextToken",
+                  "value": "<string>"
+                }
+              ]
+            },
+            "description": "Lists Amazon Q Business applications."
+          },
+          "response": [
+            {
+              "id": "1061efcc-0f2e-4227-a27c-c548dee64e81",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/applications?maxResults=<integer>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "applications"
+                  ],
+                  "query": [
+                    {
+                      "key": "maxResults",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T00:51:39.000Z",
+              "updatedAt": "2026-07-28T00:51:39.000Z",
+              "uid": "35240-1061efcc-0f2e-4227-a27c-c548dee64e81"
+            }
+          ],
+          "createdAt": "2026-07-28T00:51:39.000Z",
+          "updatedAt": "2026-07-28T00:51:39.000Z",
+          "uid": "35240-1057a784-61d5-4625-95c2-74dc099f353e"
+        },
+        {
+          "name": "Create Application",
+          "id": "1ad105a5-2f8e-4305-bcea-c57950c88ee3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/applications",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "applications"
+              ]
+            },
+            "description": "Creates an Amazon Q Business application."
+          },
+          "response": [
+            {
+              "id": "1ddf4d5c-0320-496a-80ca-fad6e699e2f4",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"displayName\": \"<string>\",\n  \"description\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/applications",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "applications"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"applicationId\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"status\": \"FAILED\",\n  \"createdAt\": \"<dateTime>\",\n  \"updatedAt\": \"<dateTime>\"\n}",
+              "createdAt": "2026-07-28T00:51:39.000Z",
+              "updatedAt": "2026-07-28T00:51:39.000Z",
+              "uid": "35240-1ddf4d5c-0320-496a-80ca-fad6e699e2f4"
+            }
+          ],
+          "createdAt": "2026-07-28T00:51:39.000Z",
+          "updatedAt": "2026-07-28T00:51:39.000Z",
+          "uid": "35240-1ad105a5-2f8e-4305-bcea-c57950c88ee3"
+        }
+      ],
+      "id": "e229cba5-4b44-4da8-a504-dbf4413d44ad",
+      "createdAt": "2026-07-28T00:51:39.000Z",
+      "updatedAt": "2026-07-28T00:51:39.000Z",
+      "uid": "35240-e229cba5-4b44-4da8-a504-dbf4413d44ad"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://qbusiness.{{region}}.amazonaws.com"
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "info": {
+    "_postman_id": "f96ffb35-8d1a-483b-b83a-38eed07102b4",
+    "name": "Amazon Q Business Applications Indices API",
+    "description": "Amazon Q Business is a generative AI-powered enterprise assistant that enables employees to ask questions, get summaries, generate content, and take actions using enterprise data.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:51:41.000Z",
+    "updatedAt": "2026-07-28T00:51:42.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-f96ffb35-8d1a-483b-b83a-38eed07102b4"
+  },
+  "item": [
+    {
+      "name": "applications",
+      "item": [
+        {
+          "name": "{applicationId}",
+          "item": [
+            {
+              "name": "indices",
+              "item": [
+                {
+                  "name": "List Indices",
+                  "id": "699ad17c-6c50-469e-af61-6c2c0ff5cf0e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/applications/:applicationId/indices",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "applications",
+                        ":applicationId",
+                        "indices"
+                      ],
+                      "variable": [
+                        {
+                          "id": "efe97fac-6e88-40b8-9986-8b0f8d9780af",
+                          "key": "applicationId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Lists the Amazon Q Business indices you have created."
+                  },
+                  "response": [
+                    {
+                      "id": "c4cce997-5254-4d4d-9f7f-6bafe14279ae",
+                      "name": "Success",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/applications/:applicationId/indices",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "applications",
+                            ":applicationId",
+                            "indices"
+                          ],
+                          "variable": [
+                            {
+                              "key": "applicationId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:51:42.000Z",
+                      "updatedAt": "2026-07-28T00:51:42.000Z",
+                      "uid": "35240-c4cce997-5254-4d4d-9f7f-6bafe14279ae"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T00:51:42.000Z",
+                  "updatedAt": "2026-07-28T00:51:42.000Z",
+                  "uid": "35240-699ad17c-6c50-469e-af61-6c2c0ff5cf0e"
+                },
+                {
+                  "name": "Create Index",
+                  "id": "7692204c-a665-49ad-bb83-6a04ed9ecc8d",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"displayName\": \"<string>\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/applications/:applicationId/indices",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "applications",
+                        ":applicationId",
+                        "indices"
+                      ],
+                      "variable": [
+                        {
+                          "id": "3c155c3b-ec11-4ff1-a674-6652c4663429",
+                          "key": "applicationId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Creates an Amazon Q Business index."
+                  },
+                  "response": [
+                    {
+                      "id": "09873b72-31f8-4a8b-9210-95bc78dd6703",
+                      "name": "Success",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"displayName\": \"<string>\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/applications/:applicationId/indices",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "applications",
+                            ":applicationId",
+                            "indices"
+                          ],
+                          "variable": [
+                            {
+                              "key": "applicationId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"indexId\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"status\": \"DELETING\"\n}",
+                      "createdAt": "2026-07-28T00:51:42.000Z",
+                      "updatedAt": "2026-07-28T00:51:42.000Z",
+                      "uid": "35240-09873b72-31f8-4a8b-9210-95bc78dd6703"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T00:51:42.000Z",
+                  "updatedAt": "2026-07-28T00:51:42.000Z",
+                  "uid": "35240-7692204c-a665-49ad-bb83-6a04ed9ecc8d"
+                }
+              ],
+              "id": "9b59e90f-aa6c-4f40-8a9a-1570206e69e5",
+              "createdAt": "2026-07-28T00:51:42.000Z",
+              "updatedAt": "2026-07-28T00:51:42.000Z",
+              "uid": "35240-9b59e90f-aa6c-4f40-8a9a-1570206e69e5"
+            }
+          ],
+          "id": "bed0d827-e7a6-41ef-8645-9f5b5e3cc75e",
+          "createdAt": "2026-07-28T00:51:42.000Z",
+          "updatedAt": "2026-07-28T00:51:42.000Z",
+          "uid": "35240-bed0d827-e7a6-41ef-8645-9f5b5e3cc75e"
+        }
+      ],
+      "id": "fecf88b9-f286-4cfa-b542-65431f2fed63",
+      "createdAt": "2026-07-28T00:51:42.000Z",
+      "updatedAt": "2026-07-28T00:51:42.000Z",
+      "uid": "35240-fecf88b9-f286-4cfa-b542-65431f2fed63"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://qbusiness.{{region}}.amazonaws.com"
+    }
+  ]
+}

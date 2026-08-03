@@ -1,0 +1,20 @@
+{
+  "provider": "amazon-q",
+  "sources": [
+    "amazon-q-applications-api-openapi.yml",
+    "amazon-q-conversations-api-openapi.yml",
+    "amazon-q-data-sources-api-openapi.yml",
+    "amazon-q-indices-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-q-applications-api-openapi.yml",
+    "amazon-q-conversations-api-openapi.yml",
+    "amazon-q-data-sources-api-openapi.yml",
+    "amazon-q-indices-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

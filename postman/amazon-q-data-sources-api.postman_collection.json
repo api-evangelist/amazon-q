@@ -1,0 +1,266 @@
+{
+  "info": {
+    "_postman_id": "9602aacb-9c67-4f45-8360-2b0dcfe224f7",
+    "name": "Amazon Q Business Applications Data Sources API",
+    "description": "Amazon Q Business is a generative AI-powered enterprise assistant that enables employees to ask questions, get summaries, generate content, and take actions using enterprise data.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T00:51:41.000Z",
+    "updatedAt": "2026-07-28T00:51:41.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-9602aacb-9c67-4f45-8360-2b0dcfe224f7"
+  },
+  "item": [
+    {
+      "name": "applications",
+      "item": [
+        {
+          "name": "{applicationId}",
+          "item": [
+            {
+              "name": "datasources",
+              "item": [
+                {
+                  "name": "List Data Sources",
+                  "id": "c63449f7-bbb9-4410-bd70-73671dd85bc7",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/applications/:applicationId/datasources?indexId=<string>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "applications",
+                        ":applicationId",
+                        "datasources"
+                      ],
+                      "query": [
+                        {
+                          "description": "(Required) ",
+                          "key": "indexId",
+                          "value": "<string>"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "id": "d7883e47-7570-4ab9-b3c1-03ef4f4a56aa",
+                          "key": "applicationId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Lists Amazon Q Business data sources for a retriever-based application."
+                  },
+                  "response": [
+                    {
+                      "id": "c1ebdefc-ec93-4b22-889c-95085ab8cd24",
+                      "name": "Success",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/applications/:applicationId/datasources?indexId=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "applications",
+                            ":applicationId",
+                            "datasources"
+                          ],
+                          "query": [
+                            {
+                              "description": "(Required) ",
+                              "key": "indexId",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "applicationId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:51:41.000Z",
+                      "updatedAt": "2026-07-28T00:51:41.000Z",
+                      "uid": "35240-c1ebdefc-ec93-4b22-889c-95085ab8cd24"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T00:51:41.000Z",
+                  "updatedAt": "2026-07-28T00:51:41.000Z",
+                  "uid": "35240-c63449f7-bbb9-4410-bd70-73671dd85bc7"
+                },
+                {
+                  "name": "Create Data Source",
+                  "id": "40feb571-1360-407a-a394-2d47b2ea7798",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"dataSourceId\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"type\": \"<string>\",\n  \"status\": \"UPDATING\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/applications/:applicationId/datasources",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "applications",
+                        ":applicationId",
+                        "datasources"
+                      ],
+                      "variable": [
+                        {
+                          "id": "834c4705-aa55-48f4-93d2-c9f7114bda4c",
+                          "key": "applicationId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    },
+                    "description": "Creates a data source connector for an Amazon Q Business application."
+                  },
+                  "response": [
+                    {
+                      "id": "a5d2a1b1-7b79-4e00-9f04-502706696e68",
+                      "name": "Success",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [
+                          {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: apikey",
+                            "key": "Authorization",
+                            "value": "<API Key>"
+                          }
+                        ],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n  \"dataSourceId\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"type\": \"<string>\",\n  \"status\": \"UPDATING\"\n}",
+                          "options": {
+                            "raw": {
+                              "headerFamily": "json",
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": {
+                          "raw": "{{baseUrl}}/applications/:applicationId/datasources",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "applications",
+                            ":applicationId",
+                            "datasources"
+                          ],
+                          "variable": [
+                            {
+                              "key": "applicationId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": null,
+                      "createdAt": "2026-07-28T00:51:41.000Z",
+                      "updatedAt": "2026-07-28T00:51:41.000Z",
+                      "uid": "35240-a5d2a1b1-7b79-4e00-9f04-502706696e68"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T00:51:41.000Z",
+                  "updatedAt": "2026-07-28T00:51:41.000Z",
+                  "uid": "35240-40feb571-1360-407a-a394-2d47b2ea7798"
+                }
+              ],
+              "id": "f51137fa-3526-47e9-8aa0-f45f16c5c7c8",
+              "createdAt": "2026-07-28T00:51:41.000Z",
+              "updatedAt": "2026-07-28T00:51:41.000Z",
+              "uid": "35240-f51137fa-3526-47e9-8aa0-f45f16c5c7c8"
+            }
+          ],
+          "id": "307e62e7-2e7d-4579-b070-82f8c7109c07",
+          "createdAt": "2026-07-28T00:51:41.000Z",
+          "updatedAt": "2026-07-28T00:51:41.000Z",
+          "uid": "35240-307e62e7-2e7d-4579-b070-82f8c7109c07"
+        }
+      ],
+      "id": "c751c204-be3d-4b68-ad9d-473a2a7e53a0",
+      "createdAt": "2026-07-28T00:51:41.000Z",
+      "updatedAt": "2026-07-28T00:51:41.000Z",
+      "uid": "35240-c751c204-be3d-4b68-ad9d-473a2a7e53a0"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://qbusiness.{{region}}.amazonaws.com"
+    }
+  ]
+}
