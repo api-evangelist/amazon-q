@@ -293,6 +293,17 @@ apis:
   - type: GitHubRepository
     url: https://github.com/aws/amazon-q-developer-cli
 common:
+  - type: IssueTracker
+    url: https://github.com/aws/amazon-q-connectjs/issues
+  - type: Releases
+    url: https://github.com/aws/amazon-q-connectjs/releases
+  - type: CodeOfConduct
+    url: https://github.com/aws/amazon-q-connectjs/blob/main/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/aws/amazon-q-connectjs/blob/main/CONTRIBUTING.md
+  - type: License
+    name: Apache-2.0
+    url: https://github.com/aws/amazon-q-connectjs/blob/main/LICENSE
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/amazon-q/overview
   - type: AgenticAccess
@@ -380,7 +391,7 @@ common:
   - type: Vocabulary
     url: vocabulary/amazon-q-vocabulary.yaml
   - type: OpenAPI
-    url: openapi/amazon-q-openapi.yml
+    url: openapi/_original/amazon-q-openapi.yml
   - type: Integrations
     url: https://aws.amazon.com/partners/
 integrations:
