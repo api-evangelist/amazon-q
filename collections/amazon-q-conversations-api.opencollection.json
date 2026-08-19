@@ -1,0 +1,66 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Q Business Applications Conversations API",
+    "version": "2023-11-27"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Conversations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Conversations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://qbusiness.{region}.amazonaws.com/applications/:applicationId/conversations",
+            "params": [
+              {
+                "name": "applicationId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Lists one or more Amazon Q Business conversations."
+        },
+        {
+          "info": {
+            "name": "Chat Sync",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://qbusiness.{region}.amazonaws.com/applications/:applicationId/conversations",
+            "params": [
+              {
+                "name": "applicationId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Starts or continues a synchronous Amazon Q Business conversation."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
