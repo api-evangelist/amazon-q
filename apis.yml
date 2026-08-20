@@ -38,6 +38,11 @@ apis:
   humanURL: https://docs.aws.amazon.com/amazonq/latest/api-reference/API_Operations_QApps.html
   baseURL: https://qbusiness.{region}.amazonaws.com
   tags:
+  - Application
+  - Enterprise
+  - Generative AI
+  - Low-Code
+  tags_raw:
   - Applications
   - Enterprise
   - Generative AI
@@ -98,6 +103,8 @@ apis:
   humanURL: https://aws.amazon.com/q/business/
   baseURL: https://qbusiness.{region}.amazonaws.com
   tags:
+  - Application
+  tags_raw:
   - Applications
   properties:
   - type: OpenAPI
