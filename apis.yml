@@ -428,3 +428,5 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
     x-twitter: apievangelist
+x-parent: aws
+x-relationship: product
