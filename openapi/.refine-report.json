@@ -1,10 +1,7 @@
 {
   "provider": "amazon-q",
   "sources": [
-    "amazon-q-applications-api-openapi.yml",
-    "amazon-q-conversations-api-openapi.yml",
-    "amazon-q-data-sources-api-openapi.yml",
-    "amazon-q-indices-api-openapi.yml"
+    "_original/amazon-q-openapi.yml"
   ],
   "outputs": [
     "amazon-q-applications-api-openapi.yml",
@@ -16,7 +13,18 @@
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "amazon-q-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "amazon-q-openapi.yml: declared missing tag: Applications",
+    "amazon-q-openapi.yml: declared missing tag: Conversations",
+    "amazon-q-openapi.yml: declared missing tag: Data Sources",
+    "amazon-q-openapi.yml: declared missing tag: Indices",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "amazon-q-applications-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-q-conversations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-q-data-sources-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-q-indices-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
