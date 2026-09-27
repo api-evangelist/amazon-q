@@ -310,7 +310,7 @@ apis:
     url: https://github.com/aws/amazon-q-developer-cli
 common:
 - type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/q/
 - type: IssueTracker
   url: https://github.com/aws/amazon-q-connectjs/issues
 - type: Releases
@@ -425,5 +425,5 @@ maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
   x-twitter: apievangelist
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product
