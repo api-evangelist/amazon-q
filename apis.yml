@@ -309,6 +309,8 @@ apis:
   - type: GitHubRepository
     url: https://github.com/aws/amazon-q-developer-cli
 common:
+- type: Plans
+  url: plans/amazon-q-plans-pricing.yml
 - type: Website
   url: https://aws.amazon.com/q/
 - type: IssueTracker
