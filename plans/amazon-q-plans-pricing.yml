@@ -1,244 +1,75 @@
-specification: API Commons Plans
-specificationVersion: '0.1'
-schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
-provider: Amazon Q
-providerId: amazon-q
-created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: true
-tags:
-  - Amazon
-  - AWS
-  - GenAI
-  - AI Assistant
-  - Developer Tools
-description: Amazon Q is sold as two product lines. Q Developer is per-user/month with a Free tier (50
-  agentic requests) and a Pro tier ($19/user/month). Q Business is per-user/month with Lite ($3) and
-  Pro ($20) plans, plus separate Index pricing (per-hour Starter or Enterprise units), media-processing
-  surcharges, and consumption-based pricing for anonymous/embedded use cases.
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://aws.amazon.com/q/business/pricing/
 sources:
-  - https://aws.amazon.com/q/developer/pricing/
-  - https://aws.amazon.com/q/business/pricing/
+- https://aws.amazon.com/q/business/pricing/
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: per-seat
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+  managed_tier: Amazon Q Business Lite
+published: true
+note: 'Page prices per-user subscriptions (Lite/Pro), consumption unit bundles for anonymous API use,
+  and hourly index unit pricing, plus media processing rates and free trial terms. Also mentions Amazon
+  Q in QuickSight enablement fee: $250/month/account in a pricing example.'
+plan_count: 6
+currency: USD
 plans:
-  - id: amazon-q-developer-free
-    name: Q Developer - Free
-    type: freemium
-    description: Free tier for individual developers - 50 agentic requests per month, access to latest
-      Claude models in IDE and CLI.
-    entries:
-      - label: Per user
-        name: developer_free_seat
-        type: subscription
-        metric: seat
-        limit: -1
-        timeFrame: month
-        geo: global
-        unit: 1
-        price: '0.00'
-        userMultiplied: true
-      - label: Agentic requests
-        name: developer_free_agentic
-        type: quota
-        metric: request
-        limit: 50
-        timeFrame: month
-        geo: global
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Latest Claude models
-      - name: IDE and CLI integration
-      - name: Reference tracking
-      - name: Public code suppression
-      - name: Q&A in AWS Console
-  - id: amazon-q-developer-pro
-    name: Q Developer - Pro
-    type: subscription
-    description: Per-user paid plan with elevated agentic-request limits, code transformation, and admin
-      controls.
-    entries:
-      - label: Per user
-        name: developer_pro_seat
-        type: subscription
-        metric: seat
-        limit: -1
-        timeFrame: month
-        geo: global
-        unit: 1
-        price: '19.00'
-        userMultiplied: true
-      - label: Code-transformation overage
-        name: developer_pro_overage
-        type: metered
-        metric: line-of-code
-        limit: -1
-        timeFrame: month
-        geo: global
-        unit: 1
-        price: '0.003'
-        userMultiplied: false
-    elements:
-      - name: Increased agentic request limits
-      - name: 4,000 LOC/month Java + .NET transformation (pooled per account)
-      - name: Admin dashboard, user and policy management
-      - name: Identity Center support
-      - name: IP indemnity
-  - id: amazon-q-business-lite
-    name: Q Business - Lite
-    type: subscription
-    description: Per-user plan for question answering and basic permission-aware responses, up to ~1-page
-      answers.
-    entries:
-      - label: Per user
-        name: business_lite_seat
-        type: subscription
-        metric: seat
-        limit: -1
-        timeFrame: month
-        geo: global
-        unit: 1
-        price: '3.00'
-        userMultiplied: true
-    elements:
-      - name: Permission-aware responses
-      - name: Secure enterprise login
-      - name: File insights
-      - name: Browser extension
-  - id: amazon-q-business-pro
-    name: Q Business - Pro
-    type: subscription
-    description: Per-user plan with full capabilities including Q Apps, QuickSight integration, Slack/Outlook/Teams
-      integration.
-    entries:
-      - label: Per user
-        name: business_pro_seat
-        type: subscription
-        metric: seat
-        limit: -1
-        timeFrame: month
-        geo: global
-        unit: 1
-        price: '20.00'
-        userMultiplied: true
-    elements:
-      - name: Q Apps
-      - name: QuickSight integration
-      - name: Up to ~7-page responses
-      - name: Image processing
-      - name: API integrations
-      - name: Slack, Outlook, Word, Teams integration
-  - id: amazon-q-business-index
-    name: Q Business - Index
-    type: usage-based
-    description: Hourly capacity for indexing connected data sources. Required alongside seat plans.
-    entries:
-      - label: Starter Index
-        name: starter_index
-        type: metered
-        metric: index-unit-hour
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '0.140'
-        userMultiplied: false
-      - label: Enterprise Index
-        name: enterprise_index
-        type: metered
-        metric: index-unit-hour
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '0.264'
-        userMultiplied: false
-      - label: Image processing
-        name: media_image
-        type: metered
-        metric: image
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '0.003'
-        userMultiplied: false
-      - label: Audio processing
-        name: media_audio
-        type: metered
-        metric: minute
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '0.006'
-        userMultiplied: false
-      - label: Video processing
-        name: media_video
-        type: metered
-        metric: minute
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '0.050'
-        userMultiplied: false
-    elements:
-      - name: Connected data source indexing
-      - name: Multimodal media ingestion
-  - id: amazon-q-business-consumption
-    name: Q Business - Consumption (anonymous/embedded)
-    type: usage-based
-    description: Per-unit pricing for anonymous or embedded use cases - 2 units per API call or prompt.
-    entries:
-      - label: Consumption units
-        name: consumption_units
-        type: metered
-        metric: unit
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 30000
-        price: '200.00'
-        userMultiplied: false
-    elements:
-      - name: No per-seat fee
-      - name: Suited for embedded apps and anonymous endpoints
-  - id: amazon-q-business-trial
-    name: Q Business - 60-Day Trial
-    type: freemium
-    description: Free 60-day trial for up to 50 Pro or Lite users plus 1,500 complimentary index hours.
-    entries:
-      - label: Trial users
-        name: trial_users
-        type: quota
-        metric: seat
-        limit: 50
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Trial index hours
-        name: trial_index_hours
-        type: quota
-        metric: index-hour
-        limit: 1500
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: One trial application per AWS Payer account
-      - name: 60-day evaluation window
-maintainers:
-  - name: Kin Lane
-    email: kin@apievangelist.com
-    url: https://apievangelist.com
-  - name: Amazon Web Services
-    email: support@aws.amazon.com
-    url: https://aws.amazon.com
+- name: Amazon Q Business Lite
+  price_text: $3 per user/mo.
+  price: 3
+  currency: USD
+  period: month
+  unit: user
+  included_quota: 'Basic functionality: ask questions, permission-aware responses up to approximately
+    one page, enterprise sign-on, insights on uploaded files, web browser extension'
+- name: Amazon Q Business Pro
+  price_text: $20 per user/mo.
+  price: 20
+  currency: USD
+  period: month
+  unit: user
+  included_quota: Full suite including Amazon Q Apps, Amazon Q in QuickSight (Reader Pro), plugins, responses
+    up to approximately seven pages, Slack/Outlook/Word/Teams integration
+- name: Amazon Q Business consumption price
+  price_text: $200 for 30,000 units/ month
+  price: 200
+  currency: USD
+  period: month
+  unit: bundle of 30,000 units
+  included_quota: 2 units per ChatSync API call or per prompt sent from the embedded chat experience
+  overage: New bundles are automatically purchased at the same price point once all units are used; unused
+    units do not roll over
+- name: Starter Index
+  price_text: $0.140 per hour for one unit (limit five units per application)
+  price: 0.14
+  currency: USD
+  period: per-use
+  unit: index unit per hour
+  included_quota: 100 hours of connector usage per month; 20,000 documents or 200 MB of extracted text,
+    whichever comes first
+  overage: $0.003 per image ($3/1000 images); Audio $0.006/minute; Video $0.050/minute
+- name: Enterprise Index
+  price_text: $0.264 per hour for one unit
+  price: 0.264
+  currency: USD
+  period: per-use
+  unit: index unit per hour
+  included_quota: 100 hours of connector usage per month; 20,000 documents or 200 MB of extracted text,
+    whichever comes first
+  overage: $0.003 per image ($3/1000 images); Audio $0.006/minute; Video $0.050/minute
+- name: Free trial
+  price_text: 60-day free trial for up to 50 Amazon Q Business Pro or Lite users per application
+  period: none
+  included_quota: Free trial of 1,500 index hours per application to be used in 60 days; 30-day free trial
+    for up to 4 users per Amazon QuickSight account
+rate_limit_statements:
+- limit five units per application
+- Amazon Q Business has a limit of 1 free-trial application per AWS Payer account.
