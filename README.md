@@ -1,4 +1,4 @@
-# Amazon Q (amazon-q)
+# Amazon Q
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,196 +66,225 @@
 
 Amazon Q is a generative AI-powered assistant that helps with various tasks including answering questions, generating content, and taking actions based on your enterprise data and systems. It is available in multiple product variants including Amazon Q Business for enterprise knowledge, Amazon Q Developer for software development, and Amazon Q in Connect for customer service agents.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/amazon-q/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/amazon-q/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · Assistant · AWS · Enterprise · Generative AI
 
-## Tags
+## Amazon Q on APIs.io
 
-- Artificial Intelligence
-- Assistant
-- AWS
-- Enterprise
-- Generative AI
+Everything profiled for Amazon Q is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-q/](https://apis.io/providers/amazon-q/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (34)
 
-- **Created:** Sun Jan 14 2024 19:00:00 GMT-0500 (Eastern Standard Time)
-- **Modified:** 2026-05-19
+- [Amazon Q Business QApps API](https://apis.io/apis/amazon-q/amazon-q-business-qapps-api/) — API for Amazon Q Apps, a feature within Amazon Q Business that allows web experience users to create lightweight, purpose-built AI apps to fulfill specific…
+- [Amazon Q Connect API](https://apis.io/apis/amazon-q/amazon-q-connect-api/) — API for Amazon Q in Connect, a generative AI-powered customer service assistant integrated with Amazon Connect. It automatically detects customer intent…
+- [Amazon Q Developer in Chat Applications API](https://apis.io/apis/amazon-q/amazon-q-developer-in-chat-applications-api/) — API for Amazon Q Developer in chat applications, which enables integration of Amazon Q Developer capabilities into messaging platforms. It provides…
+- [Amazon Q Applications API](https://apis.io/apis/amazon-q/amazon-q-applications-api/) — The Applications API from Amazon Q — 2 operation(s) for applications.
+- [Amazon Q Conversations API](https://apis.io/apis/amazon-q/amazon-q-conversations-api/) — The Conversations API from Amazon Q — 1 operation(s) for conversations.
+- [Amazon Q Data Sources API](https://apis.io/apis/amazon-q/amazon-q-data-sources-api/) — The Data Sources API from Amazon Q — 1 operation(s) for data sources.
+- [Amazon Q Indices API](https://apis.io/apis/amazon-q/amazon-q-indices-api/) — The Indices API from Amazon Q — 1 operation(s) for indices.
+- [Amazon Q Q Aiagents API](https://apis.io/apis/amazon-q/amazon-q-aiagents-api/) — The Q Aiagents API from Amazon Q — 2 operation(s) for q aiagents.
+- [Amazon Q Q Aiguardrails API](https://apis.io/apis/amazon-q/amazon-q-aiguardrails-api/) — The Q Aiguardrails API from Amazon Q — 2 operation(s) for q aiguardrails.
+- [Amazon Q Q Aiprompts API](https://apis.io/apis/amazon-q/amazon-q-aiprompts-api/) — The Q Aiprompts API from Amazon Q — 2 operation(s) for q aiprompts.
+- [Amazon Q Q Assistants API](https://apis.io/apis/amazon-q/amazon-q-assistants-api/) — The Q Assistants API from Amazon Q — 2 operation(s) for q assistants.
+- [Amazon Q Q Associations API](https://apis.io/apis/amazon-q/amazon-q-associations-api/) — The Q Associations API from Amazon Q — 4 operation(s) for q associations.
+- [Amazon Q Q Attachments API](https://apis.io/apis/amazon-q/amazon-q-attachments-api/) — The Q Attachments API from Amazon Q — 4 operation(s) for q attachments.
+- [Amazon Q Q Chatcontrols API](https://apis.io/apis/amazon-q/amazon-q-chatcontrols-api/) — The Q Chatcontrols API from Amazon Q — 1 operation(s) for q chatcontrols.
+- [Amazon Q Q Chatresponseconfigurations API](https://apis.io/apis/amazon-q/amazon-q-chatresponseconfigurations-api/) — The Q Chatresponseconfigurations API from Amazon Q — 2 operation(s) for q chatresponseconfigurations.
+- [Amazon Q Q Contents API](https://apis.io/apis/amazon-q/amazon-q-contents-api/) — The Q Contents API from Amazon Q — 2 operation(s) for q contents.
+- [Amazon Q Q Dataaccessors API](https://apis.io/apis/amazon-q/amazon-q-dataaccessors-api/) — The Q Dataaccessors API from Amazon Q — 2 operation(s) for q dataaccessors.
+- [Amazon Q Q Documents API](https://apis.io/apis/amazon-q/amazon-q-documents-api/) — The Q Documents API from Amazon Q — 3 operation(s) for q documents.
+- [Amazon Q Q Experiences API](https://apis.io/apis/amazon-q/amazon-q-experiences-api/) — The Q Experiences API from Amazon Q — 2 operation(s) for q experiences.
+- [Amazon Q Q Groups API](https://apis.io/apis/amazon-q/amazon-q-groups-api/) — The Q Groups API from Amazon Q — 2 operation(s) for q groups.
+- [Amazon Q Q Importjobs API](https://apis.io/apis/amazon-q/amazon-q-importjobs-api/) — The Q Importjobs API from Amazon Q — 2 operation(s) for q importjobs.
+- [Amazon Q Q Knowledgebases API](https://apis.io/apis/amazon-q/amazon-q-knowledgebases-api/) — The Q Knowledgebases API from Amazon Q — 2 operation(s) for q knowledgebases.
+- [Amazon Q Q Messagetemplates API](https://apis.io/apis/amazon-q/amazon-q-messagetemplates-api/) — The Q Messagetemplates API from Amazon Q — 2 operation(s) for q messagetemplates.
+- [Amazon Q Q Operations API](https://apis.io/apis/amazon-q/amazon-q-operations-api/) — The Q Operations API from Amazon Q — 32 operation(s) for q operations.
+- [Amazon Q Q Plugins API](https://apis.io/apis/amazon-q/amazon-q-plugins-api/) — The Q Plugins API from Amazon Q — 2 operation(s) for q plugins.
+- [Amazon Q Q Policy API](https://apis.io/apis/amazon-q/amazon-q-policy-api/) — The Q Policy API from Amazon Q — 2 operation(s) for q policy.
+- [Amazon Q Q Quickresponses API](https://apis.io/apis/amazon-q/amazon-q-quickresponses-api/) — The Q Quickresponses API from Amazon Q — 2 operation(s) for q quickresponses.
+- [Amazon Q Q Retrievers API](https://apis.io/apis/amazon-q/amazon-q-retrievers-api/) — The Q Retrievers API from Amazon Q — 2 operation(s) for q retrievers.
+- [Amazon Q Q Search API](https://apis.io/apis/amazon-q/amazon-q-search-api/) — The Q Search API from Amazon Q — 3 operation(s) for q search.
+- [Amazon Q Q Sessions API](https://apis.io/apis/amazon-q/amazon-q-sessions-api/) — The Q Sessions API from Amazon Q — 2 operation(s) for q sessions.
+- [Amazon Q Q Subscriptions API](https://apis.io/apis/amazon-q/amazon-q-subscriptions-api/) — The Q Subscriptions API from Amazon Q — 2 operation(s) for q subscriptions.
+- [Amazon Q Q Tags API](https://apis.io/apis/amazon-q/amazon-q-tags-api/) — The Q Tags API from Amazon Q — 2 operation(s) for q tags.
+- [Amazon Q Q Users API](https://apis.io/apis/amazon-q/amazon-q-users-api/) — The Q Users API from Amazon Q — 2 operation(s) for q users.
+- [Amazon Q Q Versions API](https://apis.io/apis/amazon-q/amazon-q-versions-api/) — The Q Versions API from Amazon Q — 7 operation(s) for q versions.
 
-## APIs
+### Published properties
 
-### Amazon Q Business API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-API for Amazon Q Business, a fully managed generative AI-powered enterprise chat assistant that you can deploy within your organization. It enables employees to ask questions, get summaries, generate content, and complete tasks using enterprise data from connected data sources with permissions-aware responses.
+#### Agentic access (1)
 
-- **Human URL:** [https://aws.amazon.com/q/business/](https://aws.amazon.com/q/business/)
-- **Base URL:** `https://qbusiness.{region}.amazonaws.com`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Amazon Q Agentic Access](https://apis.io/agentic-access/amazon-q/amazon-q-agentic-access/)
 
-- Business Intelligence
-- Enterprise
-- Generative AI
-- Knowledge Management
-- Q&A
+#### JSON Schema (10)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/)
-- [OpenAPI](https://example.com/openapi/amazon-q-business.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Authentication](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/security-iam.html)
-- [Pricing](https://aws.amazon.com/q/business/pricing/)
-- [API Reference](https://docs.aws.amazon.com/amazonq/latest/api-reference/Welcome.html)
-- [Getting Started](https://aws.amazon.com/q/business/getting-started/)
-- [Features](https://aws.amazon.com/q/business/features/)
-- [Documentation](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/what-is.html)
-- [C L I](https://docs.aws.amazon.com/cli/latest/reference/qbusiness/)
-- [SDK](https://aws.amazon.com/tools/)
-- [Quotas](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/quotas-regions.html)
-- [Changelog](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/doc-history.html)
-- [Postman Collection](collections/amazon-q.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-q.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Application](https://apis.io/schemas/amazon-q/amazon-q-application/)
+- [Conversation](https://apis.io/schemas/amazon-q/amazon-q-conversation/)
+- [DataSource](https://apis.io/schemas/amazon-q/amazon-q-datasource/)
+- [Index](https://apis.io/schemas/amazon-q/amazon-q-index/)
+- [Message](https://apis.io/schemas/amazon-q/amazon-q-message/)
+- [Application](https://apis.io/schemas/amazon-q/amazon-q-openapi-application/)
+- [Conversation](https://apis.io/schemas/amazon-q/amazon-q-openapi-conversation/)
+- [DataSource](https://apis.io/schemas/amazon-q/amazon-q-openapi-data-source/)
+- [Index](https://apis.io/schemas/amazon-q/amazon-q-openapi-index/)
+- [Message](https://apis.io/schemas/amazon-q/amazon-q-openapi-message/)
 
-### Amazon Q Business QApps API
+#### JSON Structure (6)
 
-API for Amazon Q Apps, a feature within Amazon Q Business that allows web experience users to create lightweight, purpose-built AI apps to fulfill specific tasks using their enterprise data. It supports creating, managing, sharing, and running custom Q Apps through a library system.
+Data models expressed in JSON Structure.
 
-- **Human URL:** [https://docs.aws.amazon.com/amazonq/latest/api-reference/API_Operations_QApps.html](https://docs.aws.amazon.com/amazonq/latest/api-reference/API_Operations_QApps.html)
-- **Base URL:** `https://qbusiness.{region}.amazonaws.com`
+- [Amazon Q Openapi Application Structure](https://apis.io/json-structure/amazon-q/amazon-q-openapi-application-structure/)
+- [Amazon Q Openapi Conversation Structure](https://apis.io/json-structure/amazon-q/amazon-q-openapi-conversation-structure/)
+- [Amazon Q Openapi Data Source Structure](https://apis.io/json-structure/amazon-q/amazon-q-openapi-data-source-structure/)
+- [Amazon Q Openapi Index Structure](https://apis.io/json-structure/amazon-q/amazon-q-openapi-index-structure/)
+- [Amazon Q Openapi Message Structure](https://apis.io/json-structure/amazon-q/amazon-q-openapi-message-structure/)
+- [Amazon Q Structure](https://apis.io/json-structure/amazon-q/amazon-q-structure/)
 
-#### Tags
+#### JSON-LD (5)
 
-- Applications
-- Enterprise
-- Generative AI
-- Low Code
+Linked-data contexts for the provider's vocabulary.
 
-#### Properties
+- [Amazon Q Openapi Application Context](https://apis.io/jsonld/amazon-q/amazon-q-openapi-application-context/)
+- [Amazon Q Openapi Conversation Context](https://apis.io/jsonld/amazon-q/amazon-q-openapi-conversation-context/)
+- [Amazon Q Openapi Data Source Context](https://apis.io/jsonld/amazon-q/amazon-q-openapi-data-source-context/)
+- [Amazon Q Openapi Index Context](https://apis.io/jsonld/amazon-q/amazon-q-openapi-index-context/)
+- [Amazon Q Openapi Message Context](https://apis.io/jsonld/amazon-q/amazon-q-openapi-message-context/)
 
-- [Documentation](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/)
-- [API Reference](https://docs.aws.amazon.com/amazonq/latest/api-reference/API_Operations_QApps.html)
-- [Postman Collection](collections/amazon-q.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-q.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Vocabulary (1)
 
-### Amazon Q Developer API
+The provider's domain terms, defined.
 
-API for Amazon Q Developer, the most capable generative AI-powered assistant for software development. It provides inline code suggestions, chat-based coding assistance, security scanning, code transformations, and agentic feature development across IDEs, the CLI, and the AWS Management Console.
+- [Amazon Q Vocabulary](https://apis.io/vocabularies/amazon-q/amazon-q-vocabulary/)
 
-- **Human URL:** [https://aws.amazon.com/q/developer/](https://aws.amazon.com/q/developer/)
-- **Base URL:** `https://q.{region}.amazonaws.com`
+#### Examples (5)
 
-#### Tags
+Example requests and responses.
 
-- AI Assistant
-- Code Generation
-- Developer Tools
-- IDE Integration
-- Security Scanning
+- [Amazon Q Openapi Application Example](https://apis.io/examples/amazon-q/amazon-q-openapi-application-example/)
+- [Amazon Q Openapi Conversation Example](https://apis.io/examples/amazon-q/amazon-q-openapi-conversation-example/)
+- [Amazon Q Openapi Data Source Example](https://apis.io/examples/amazon-q/amazon-q-openapi-data-source-example/)
+- [Amazon Q Openapi Index Example](https://apis.io/examples/amazon-q/amazon-q-openapi-index-example/)
+- [Amazon Q Openapi Message Example](https://apis.io/examples/amazon-q/amazon-q-openapi-message-example/)
 
-#### Properties
+#### Collections (9)
 
-- [Documentation](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/)
-- [OpenAPI](https://example.com/openapi/amazon-q-developer.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Authentication](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security-iam.html)
-- [Pricing](https://aws.amazon.com/q/developer/pricing/)
-- [Getting Started](https://aws.amazon.com/q/developer/getting-started/)
-- [Features](https://aws.amazon.com/q/developer/features/)
-- [Documentation](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html)
-- [Quotas](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/quotas.html)
-- [SDK](https://aws.amazon.com/tools/)
-- [Changelog](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/doc-history.html)
-- [GitHub Repository](https://github.com/aws/amazon-q-developer-cli)
-- [Postman Collection](collections/amazon-q.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-q.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-### Amazon Q Connect API
+- [Amazon Q Business API](https://apis.io/collections/amazon-q/open-amazon-q/)
+- [Amazon Q Business Applications API](https://apis.io/collections/amazon-q/open-amazon-q-applications-api/)
+- [Amazon Q Business Applications Conversations API](https://apis.io/collections/amazon-q/open-amazon-q-conversations-api/)
+- [Amazon Q Business Applications Data Sources API](https://apis.io/collections/amazon-q/open-amazon-q-data-sources-api/)
+- [Amazon Q Business Applications Indices API](https://apis.io/collections/amazon-q/open-amazon-q-indices-api/)
+- [Amazon Q Business Applications API](https://apis.io/collections/amazon-q/postman-amazon-q-applications-api/)
+- [Amazon Q Business Applications Conversations API](https://apis.io/collections/amazon-q/postman-amazon-q-conversations-api/)
+- [Amazon Q Business Applications Data Sources API](https://apis.io/collections/amazon-q/postman-amazon-q-data-sources-api/)
+- [Amazon Q Business Applications Indices API](https://apis.io/collections/amazon-q/postman-amazon-q-indices-api/)
 
-API for Amazon Q in Connect, a generative AI-powered customer service assistant integrated with Amazon Connect. It automatically detects customer intent during calls and chats using conversational analytics and natural language understanding, then provides contact center agents with real-time generative responses, suggested actions, and links to relevant documents.
+#### Governance rules (2)
 
-- **Human URL:** [https://aws.amazon.com/connect/q/](https://aws.amazon.com/connect/q/)
-- **Base URL:** `https://wisdom.{region}.amazonaws.com`
+Spectral rulesets for the provider's contracts.
 
-#### Tags
+- [Amazon Q — jsonschema rules](https://apis.io/rules/amazon-q/amazon-q-jsonschema-spectral-rules/)
+- [Amazon Q API Rules](https://apis.io/rules/amazon-q/amazon-q-spectral-rules/)
 
-- Agent Assistance
-- Contact Center
-- Customer Service
-- Generative AI
-- Real-Time
+#### Security (4)
 
-#### Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Documentation](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-q-connect.html)
-- [API Reference](https://docs.aws.amazon.com/connect/latest/APIReference/API_Operations_Amazon_Q_Connect.html)
-- [C L I](https://docs.aws.amazon.com/cli/latest/reference/qconnect/)
-- [SDK](https://aws.amazon.com/tools/)
-- [GitHub Repository](https://github.com/aws/amazon-q-connectjs)
-- [Postman Collection](collections/amazon-q.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-q.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Amazon Q Authentication](https://apis.io/security/amazon-q/amazon-q-authentication/)
+- [Amazon Q Domain Security](https://apis.io/security/amazon-q/amazon-q-domain-security/)
+- [Amazon Q Trust Center](https://apis.io/security/amazon-q/amazon-q-trust-center/)
+- [Amazon Q Vulnerability Disclosure](https://apis.io/security/amazon-q/amazon-q-vulnerability-disclosure/)
 
-### Amazon Q Developer in Chat Applications API
+#### Plans and pricing (1)
 
-API for Amazon Q Developer in chat applications, which enables integration of Amazon Q Developer capabilities into messaging platforms. It provides descriptions, request parameters, and response formats for interacting with Amazon Q Developer through chat-based interfaces.
+Published plans, tiers and prices.
 
-- **Human URL:** [https://docs.aws.amazon.com/chatbot/latest/APIReference/Welcome.html](https://docs.aws.amazon.com/chatbot/latest/APIReference/Welcome.html)
-- **Base URL:** `https://chatbot.{region}.amazonaws.com`
+- [Amazon Q Plans Pricing](https://apis.io/plans/amazon-q/amazon-q-plans-pricing/)
 
-#### Tags
+#### Rate limits (1)
 
-- Chat
-- Developer Tools
-- Integration
-- Messaging
+Published request limits.
 
-#### Properties
+- [Amazon Q Rate Limits](https://apis.io/rate-limits/amazon-q/amazon-q-rate-limits/)
 
-- [Documentation](https://docs.aws.amazon.com/chatbot/latest/APIReference/Welcome.html)
-- [API Reference](https://docs.aws.amazon.com/chatbot/latest/APIReference/Welcome.html)
-- [Postman Collection](collections/amazon-q.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/amazon-q.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### FinOps (1)
 
-## Common Properties
+What the API costs to run, by operation.
 
-- [Portal](https://aws.amazon.com/q/)
-- [Getting Started](https://aws.amazon.com/q/getting-started/)
+- [Amazon Q Finops](https://apis.io/finops/amazon-q/amazon-q-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aws.amazon.com/q/)
 - [Documentation](https://docs.aws.amazon.com/amazonq/)
-- [Blog](https://aws.amazon.com/blogs/aws/tag/amazon-q/)
-- [F A Q](https://aws.amazon.com/q/faqs/)
-- [Support](https://aws.amazon.com/contact-us/)
-- [Terms of Service](https://aws.amazon.com/service-terms/)
-- [Privacy Policy](https://aws.amazon.com/privacy/)
+- [Getting started](https://aws.amazon.com/q/getting-started/)
 - [Pricing](https://aws.amazon.com/q/pricing/)
-- [Status Page](https://health.aws.amazon.com/health/status)
-- [SDK](https://aws.amazon.com/tools/)
-- [Portal](https://console.aws.amazon.com/)
-- [Sign Up](https://portal.aws.amazon.com/billing/signup)
-- [Community](https://repost.aws/tags/TALmcXzmfeRaKOzrBowJ9cJQ/amazon-q)
-- [GitHub Organization](https://github.com/aws)
-- [JSON-LD](json-ld/amazon-q-openapi-application-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON-LD](json-ld/amazon-q-openapi-conversation-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON-LD](json-ld/amazon-q-openapi-data-source-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON-LD](json-ld/amazon-q-openapi-index-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON-LD](json-ld/amazon-q-openapi-message-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [JSON Schema](json-schema/amazon-q-openapi-application-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-q-openapi-conversation-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-q-openapi-data-source-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-q-openapi-index-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Schema](json-schema/amazon-q-openapi-message-schema.json) — [JSON Schema](https://json-schema.org/specification)
-- [JSON Structure](json-structure/amazon-q-openapi-application-structure.json)
-- [JSON Structure](json-structure/amazon-q-openapi-conversation-structure.json)
-- [JSON Structure](json-structure/amazon-q-openapi-data-source-structure.json)
-- [JSON Structure](json-structure/amazon-q-openapi-index-structure.json)
-- [JSON Structure](json-structure/amazon-q-openapi-message-structure.json)
-- [Example](examples/amazon-q-openapi-application-example.json)
-- [Example](examples/amazon-q-openapi-conversation-example.json)
-- [Example](examples/amazon-q-openapi-data-source-example.json)
-- [Example](examples/amazon-q-openapi-index-example.json)
-- [Example](examples/amazon-q-openapi-message-example.json)
-- [Spectral Rules](rules/amazon-q-spectral-rules.yml)
-- [Vocabulary](vocabulary/amazon-q-vocabulary.yaml)
-- [OpenAPI](openapi/amazon-q-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Integrations](https://aws.amazon.com/partners/)
+- [Support](https://aws.amazon.com/contact-us/)
+- [Blog](https://aws.amazon.com/blogs/aws/tag/amazon-q/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 62.3** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 54.5 |
+| Contract governance | 27.3 |
+| Operational transparency | 52.6 |
+| Developer ergonomics | 70.2 |
+| Access clarity | 84.2 |
+
+**Agent readiness 22.7** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 32.7** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-q/](https://apis.io/providers/amazon-q/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Q: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-q/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
