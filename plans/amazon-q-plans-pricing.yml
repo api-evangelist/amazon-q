@@ -1,0 +1,132 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://aws.amazon.com/q/business/pricing/
+sources:
+- https://aws.amazon.com/q/business/pricing/
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: per-seat
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+  managed_tier: Amazon Q Business Lite
+published: true
+note: 'Page prices per-user subscriptions (Lite/Pro), consumption unit bundles for anonymous API use,
+  and hourly index unit pricing, plus media processing rates and free trial terms. Also mentions Amazon
+  Q in QuickSight enablement fee: $250/month/account in a pricing example.'
+plan_count: 6
+currency: USD
+plans:
+- name: Amazon Q Business Lite
+  price_text: $3 per user/mo.
+  price: 3
+  currency: USD
+  period: month
+  unit: user
+  included_quota: 'Basic functionality: ask questions, permission-aware responses up to approximately
+    one page, enterprise sign-on, insights on uploaded files, web browser extension'
+- name: Amazon Q Business Pro
+  price_text: $20 per user/mo.
+  price: 20
+  currency: USD
+  period: month
+  unit: user
+  included_quota: Full suite including Amazon Q Apps, Amazon Q in QuickSight (Reader Pro), plugins, responses
+    up to approximately seven pages, Slack/Outlook/Word/Teams integration
+- name: Amazon Q Business consumption price
+  price_text: $200 for 30,000 units/ month
+  price: 200
+  currency: USD
+  period: month
+  unit: bundle of 30,000 units
+  included_quota: 2 units per ChatSync API call or per prompt sent from the embedded chat experience
+  overage: New bundles are automatically purchased at the same price point once all units are used; unused
+    units do not roll over
+- name: Starter Index
+  price_text: $0.140 per hour for one unit (limit five units per application)
+  price: 0.14
+  currency: USD
+  period: per-use
+  unit: index unit per hour
+  included_quota: 100 hours of connector usage per month; 20,000 documents or 200 MB of extracted text,
+    whichever comes first
+  overage: $0.003 per image ($3/1000 images); Audio $0.006/minute; Video $0.050/minute
+- name: Enterprise Index
+  price_text: $0.264 per hour for one unit
+  price: 0.264
+  currency: USD
+  period: per-use
+  unit: index unit per hour
+  included_quota: 100 hours of connector usage per month; 20,000 documents or 200 MB of extracted text,
+    whichever comes first
+  overage: $0.003 per image ($3/1000 images); Audio $0.006/minute; Video $0.050/minute
+- name: Free trial
+  price_text: 60-day free trial for up to 50 Amazon Q Business Pro or Lite users per application
+  period: none
+  included_quota: Free trial of 1,500 index hours per application to be used in 60 days; 30-day free trial
+    for up to 4 users per Amazon QuickSight account
+rate_limit_statements:
+- limit five units per application
+- Amazon Q Business has a limit of 1 free-trial application per AWS Payer account.
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - seat
+  units:
+  - compute
+  - seat
+  plans:
+  - name: Amazon Q Business Lite
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Amazon Q Business Pro
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: Amazon Q Business consumption price
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Starter Index
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Enterprise Index
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Free trial
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods:
+    - none
