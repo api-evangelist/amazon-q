@@ -74,7 +74,7 @@ rate_limit_statements:
 - limit five units per application
 - Amazon Q Business has a limit of 1 free-trial application per AWS Payer account.
 x-canonical:
-  generated: '2026-11-02'
+  generated: '2026-11-06'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid
