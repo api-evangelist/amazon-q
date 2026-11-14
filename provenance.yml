@@ -5,10 +5,19 @@ artifacts:
   agentic-access/amazon-q-agentic-access.yml:
     method: generated
     evidence: declared in the artifact
+  ai-preferences/amazon-q-ai-preferences.yml:
+    method: harvested
+    evidence: declared in the artifact
   authentication/amazon-q-authentication.yml:
     method: derived
     evidence: declared in the artifact
   capabilities/amazon-q-capability-edges.yml:
+    method: unknown
+    evidence: no authorship recorded
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
     method: unknown
     evidence: no authorship recorded
   collections/amazon-q-applications-api.opencollection.json:
@@ -41,6 +50,24 @@ artifacts:
   collections/amazon-q.postman_collection.json:
     method: derived
     evidence: openapi/amazon-q
+  compliance/amazon-q-compliance.yml:
+    method: harvested
+    evidence: declared in the artifact
+  conformance/amazon-q-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-q-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/amazon-q-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  eligibility/amazon-q-eligibility.yml:
+    method: harvested
+    evidence: declared in the artifact
+  errors/amazon-q-problem-types.yml:
+    method: derived
+    evidence: declared in the artifact
   examples/amazon-q-openapi-application-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -62,12 +89,18 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-q-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
   integrations/amazon-q-integration-edges.yml:
     method: searched
     evidence: declared in the artifact
+  json-ld/amazon-q-context.jsonld:
+    method: unknown
+    evidence: no authorship recorded
   json-ld/amazon-q-openapi-application-context.jsonld:
     method: unknown
     evidence: no authorship recorded
@@ -86,13 +119,463 @@ artifacts:
   json-schema/amazon-q-application-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-q-associate-permission-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-associate-permission-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-batch-delete-document-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-batch-delete-document-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-batch-put-document-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-batch-put-document-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-cancel-subscription-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-chat-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-chat-sync-input-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-chat-sync-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-q-conversation-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-aiagent-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-aiagent-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-aiguardrail-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-aiguardrail-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-aiprompt-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-aiprompt-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-application-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-application-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-assistant-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-assistant-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-assistant-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-chat-response-configuration-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-chat-response-configuration-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-content-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-content-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-data-accessor-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-data-accessor-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-data-source-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-index-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-knowledge-base-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-knowledge-base-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-message-template-attachment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-message-template-attachment-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-message-template-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-message-template-version-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-plugin-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-plugin-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-qapp-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-quick-response-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-retriever-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-session-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-session-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-subscription-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-subscription-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-user-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-create-web-experience-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-data-qapps-tag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-data-qapps-untag-resource-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-q-datasource-schema.json:
     method: unknown
     evidence: no authorship recorded
+  json-schema/amazon-q-delete-aiagent-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-aiguardrail-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-aiprompt-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-assistant-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-attachment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-chat-controls-configuration-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-chat-controls-configuration-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-content-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-conversation-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-data-source-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-import-job-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-knowledge-base-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-message-template-attachment-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-message-template-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-quick-response-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-retriever-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-user-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-delete-web-experience-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-disassociate-permission-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-disassociate-permission-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-aiagent-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-aiguardrail-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-aiprompt-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-application-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-assistant-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-chat-controls-configuration-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-chat-controls-configuration-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-chat-response-configuration-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-content-association-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-content-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-data-accessor-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-data-accessor-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-data-source-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-document-content-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-document-content-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-group-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-import-job-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-import-job-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-index-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-index-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-knowledge-base-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-library-item-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-message-template-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-plugin-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-policy-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-policy-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-qapp-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-quick-response-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-retriever-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-session-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-session-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-user-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-user-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-get-web-experience-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/amazon-q-index-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-aiagent-versions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-aiagents-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-aiagents-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-aiguardrails-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-aiguardrails-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-aiprompt-versions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-aiprompts-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-aiprompts-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-applications-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-applications-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-assistant-associations-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-assistants-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-assistants-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-attachments-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-attachments-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-chat-response-configurations-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-chat-response-configurations-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-content-associations-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-contents-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-conversations-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-data-accessors-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-data-sources-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-data-sources-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-documents-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-documents-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-groups-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-groups-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-import-jobs-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-import-jobs-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-indices-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-indices-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-knowledge-bases-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-knowledge-bases-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-message-templates-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-message-templates-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-messages-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-plugins-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-plugins-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-quick-responses-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-quick-responses-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-retrievers-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-retrievers-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-subscriptions-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-subscriptions-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-web-experiences-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-list-web-experiences-response-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-q-message-schema.json:
@@ -111,6 +594,114 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   json-schema/amazon-q-openapi-message-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-put-group-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-search-content-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-search-content-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-search-message-templates-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-search-message-templates-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-search-quick-responses-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-search-quick-responses-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-send-message-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-start-import-job-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-tag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-untag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-aiagent-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-aiguardrail-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-aiprompt-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-application-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-chat-controls-configuration-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-chat-controls-configuration-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-chat-response-configuration-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-content-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-data-accessor-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-data-source-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-index-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-library-item-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-message-template-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-plugin-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-qapp-output-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-quick-response-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-retriever-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-session-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-session-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-subscription-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-user-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-user-response-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-update-web-experience-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-wisdom-tag-resource-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/amazon-q-wisdom-untag-resource-request-schema.json:
     method: unknown
     evidence: no authorship recorded
   json-structure/amazon-q-openapi-application-structure.json:
@@ -134,7 +725,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -203,10 +794,18 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  openapi/_original/amazon-q-openapi.yml:
-    method: harvested
-    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
-      to the provider's source is unverified
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  llms/amazon-q-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-q-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-q-mcp.yml:
+    method: searched
+    evidence: declared in the artifact
   openapi/amazon-q-aiagents-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -217,8 +816,8 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   openapi/amazon-q-applications-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+    method: unknown
+    evidence: no authorship recorded
   openapi/amazon-q-assistants-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
@@ -300,6 +899,12 @@ artifacts:
   openapi/amazon-q-versions-api-openapi.yml:
     method: unknown
     evidence: no authorship recorded
+  packages/amazon-q-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-q-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/amazon-q-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -318,10 +923,16 @@ artifacts:
   postman/amazon-q-indices-api.postman_collection.json:
     method: derived
     evidence: openapi/amazon-q-indices-api
+  privacy/amazon-q-privacy-policy.yml:
+    method: harvested
+    evidence: declared in the artifact
   rate-limits/amazon-q-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-q-jsonschema-spectral-rules.yml:
+    method: generated
+    evidence: declared in the artifact
+  rules/amazon-q-rules.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-q-spectral-rules.yml:
@@ -339,12 +950,39 @@ artifacts:
   sla/amazon-q-sla.yml:
     method: generated
     evidence: declared in the artifact
+  smithy/qapps-2023-11-27.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/qapps/service/2023-11-27/qapps-2023-11-27.json
+      (sha256 fd88baa93c08, fetched 2026-11-11T21:14:01+00:00)
   smithy/qbusiness-2023-11-27.json:
-    method: unknown
-    evidence: no authorship recorded
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/qbusiness/service/2023-11-27/qbusiness-2023-11-27.json
+      (sha256 0144dc238009, fetched 2026-11-11T21:14:00+00:00)
   smithy/qconnect-2020-10-19.json:
+    method: harvested
+    evidence: byte-identical to https://raw.githubusercontent.com/aws/api-models-aws/3cd98287b471c106254abd89279cc87308d38bfd/models/qconnect/service/2020-10-19/qconnect-2020-10-19.json
+      (sha256 e038de3bec03, fetched 2026-11-11T21:14:02+00:00)
+  terms/amazon-q-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-q-vendors.yml:
     method: unknown
     evidence: no authorship recorded
   vocabulary/amazon-q-vocabulary.yaml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/amazon-q-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-q-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-q-repost-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-q-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-q-well-known.yml:
     method: unknown
     evidence: no authorship recorded

@@ -2,6 +2,7 @@
 generated: '2026-10-07'
 method: searched
 source: https://aws.amazon.com/q/business/pricing/
+name: Amazon Q API Plans
 sources:
 - https://aws.amazon.com/q/business/pricing/
 provenance:
@@ -74,7 +75,7 @@ rate_limit_statements:
 - limit five units per application
 - Amazon Q Business has a limit of 1 free-trial application per AWS Payer account.
 x-canonical:
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid
